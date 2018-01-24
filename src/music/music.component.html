@@ -1,0 +1,61 @@
+<!-- 主页面 -->
+<nav class="mynav">
+    <div class="nav-list1">
+        <div class="nav-mylist">
+            <h1>
+                <a>@网易云音乐</a>
+            </h1>
+            <ul class="list-inline">
+                <li>发现音乐</li>
+                <li>我的音乐</li>
+                <li>朋友</li>
+                <li>商城</li>
+                <li>音乐人</li>
+                <li>下载客户端</li>
+            </ul>
+
+            <div class="login" (mousemove)="loginList=true" (mouseleave)="loginList=flase">
+                <a> 登录</a>
+                <i class="fa fa-caret-down"></i>
+                
+                <div class="login-list" [style.display]="loginList? 'block' : 'none'">
+                    <ul>
+                        <li>
+                            <i class="fa fa-mobile"></i>
+                            <span>手机号登录</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-weixin"></i>
+                            <span>微信登录</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-qq"></i>
+                            <span>QQ登录</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-weibo"></i>
+                            <span>新浪微博登录</span>
+                        </li>
+                        <li>
+                            <span>易</span>
+                            <span>网易云音乐</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contribute">
+                <i class="fa fa-video-camera"></i>
+                <p>视频投稿</p>
+            </div>
+            <div class="nav-mylist-search">
+                <i class="fa fa-search"></i>
+                <input type="text">
+            </div>
+
+        </div>
+    </div>
+    <div class="nav-list2">
+
+    </div>
+</nav>
+<router-outlet></router-outlet>

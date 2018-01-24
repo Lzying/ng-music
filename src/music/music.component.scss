@@ -1,0 +1,183 @@
+/*
+导航条样式
+**/
+
+.mynav {
+    max-height: 100px;
+    min-height: 70px;
+    width: 100%;
+}
+
+.nav-list1 {
+    height: 70px;
+    width: 100%;
+    margin: 0px;
+    background-color: #242424;
+    border-bottom: 1px solid #000;
+}
+
+.nav-mylist {
+    height: 69px;
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #242424;
+    >h1 {
+        margin-right: 20px;
+        width: 176px;
+        height: 69px;
+        float: left;
+        a {
+            display: block;
+            width: 176px;
+            height: 69px;
+            color: white;
+            font-size: 24px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            line-height: 69px;
+            letter-spacing: 2px;
+        }
+        a:hover {
+            cursor: pointer;
+            text-decoration: none;
+        }
+    }
+    >ul {
+        float: left;
+        height: 69px;
+        width: 510px;
+        li {
+            margin: 0px;
+            padding-left: 15px;
+            padding-right: 15px;
+            height: 69px;
+            line-height: 69px;
+            color: #ccc;
+            font-size: 14px;
+            font-weight: 540;
+        }
+        li:hover {
+            background-color: black;
+            cursor: pointer;
+            color: white;
+        }
+    }
+    .contribute {
+        float: right;
+        margin-left: 10px;
+        margin-top: 18.5px;
+        width: 90px;
+        height: 32px;
+        padding-left: 10px;
+        border: 1px solid #787878;
+        border-radius: 20px;
+        color: #ccc;
+        p,
+        i {
+            display: inline-block;
+            line-height: 32px;
+            font-size: 13px;
+        }
+    }
+    .contribute:hover {
+        color: white !important;
+        border-color: white;
+        cursor: pointer;
+    }
+    .nav-mylist-search {
+        float: right;
+        margin-left: 20px;
+        margin-top: 18.5px;
+        height: 32px;
+        width: 150px;
+        border-radius: 20px;
+        background-color: white;
+        text-align: center;
+        input {
+            width: 100px;
+            height: 32px;
+            border: none;
+        }
+        i {
+            font-size: 16px;
+        }
+    }
+}
+
+.login {
+    position: relative;
+    float: right;
+    margin-left: 10px;
+    width: 70px;
+    height: 69px;
+    line-height: 69px;
+    font-size: 14px;
+    color: #787878;
+    >a {
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 10px;
+        color: #787878;
+    }
+    >a{
+        cursor: pointer;
+    }
+    .login-list {
+        position: absolute;
+        height: 202px;
+        width: 160px;
+        left: -45px;
+        top: 60px;
+        ul {
+            width: 160px;
+            height: 202px;
+            background: #2b2b2b;
+            border: 1px solid #202020;
+            box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.50);
+            border-radius: 4px;
+            li {
+                height: 40px;
+                width: 158px;
+                line-height: 40px;
+                padding-left: 20px;
+                color: #ccc;
+                border: 1px solid #202020;
+                i,
+                span {
+                    font-size: 14px;
+                    margin-right: 10px;
+                }
+                .fa-mobile {
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 26px !important;
+                    margin-right: 12px !important;
+                }
+            }
+            li:hover {
+                color: white;
+                cursor: pointer;
+                background-color: #4e4e4e;
+            }
+        }
+    }
+}
+
+.nav-list2 {
+    height: 30px;
+    width: 100%;
+    background-color: #C20C0C;
+    border-bottom: 1px solid #a40011;
+}
+
+
+/*
+自适应
+**/
+
+@media (max-width:1100px) {
+    .mynav {
+        width: 1100px;
+    }
+}
