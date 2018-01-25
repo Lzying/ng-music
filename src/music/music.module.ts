@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { MusicRoute } from './music.route';
 
 
+
 import { MusicComponent } from './music.component';
 
 
@@ -11,7 +12,8 @@ import { MusicComponent } from './music.component';
     MusicComponent
   ],
   imports: [
-    RouterModule.forRoot(MusicRoute)
+    RouterModule.forRoot(MusicRoute),
+
   ],
   providers: [],
   bootstrap: []

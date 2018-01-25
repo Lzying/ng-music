@@ -1,0 +1,199 @@
+/**
+轮播图样式
+*/
+
+.wrap {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    height: 336px;
+    background: rgb(48, 38, 38);
+}
+
+.wrap-carousel {
+    margin-left: auto;
+    margin-right: auto;
+    width: 982px;
+    height: 336px;
+    .my-carousel {
+        float: left;
+        width: 730px;
+        height: 336px;
+    }
+    .wrap-download {
+        float: left;
+        width: 252px;
+        height: 336px;
+        background: url(../../../assets/imgs/download/download.png) no-repeat 0px 0px;
+        border: 1px solid black;
+        div {
+            position: relative;
+            width: 250px;
+            height: 270px;
+            a {
+                display: block;
+                position: absolute;
+                bottom: 2px;
+                margin-left: 18.5px;
+                height: 56px;
+                width: 215px;
+            }
+            a:hover {
+                background: url(../../../assets/imgs/download/download.png) no-repeat 1px -340px !important;
+                cursor: pointer;
+            }
+        }
+        p {
+            width: 100%;
+            margin-top: 10px;
+            text-align: center;
+            color: #666;
+        }
+    }
+}
+
+
+/**
+内容样式，划分左右两边
+*/
+
+.recommend-module {
+    margin-left: auto;
+    margin-right: auto;
+    width: 982px;
+    height: 2000px;
+    .recommend-module-left {
+        float: left;
+        height: 2000px;
+        width: 730px;
+        background-color: white;
+        border: 1px solid rgb(221, 221, 221);
+        border-top: none;
+    }
+    .recommend-module-right {
+        float: left;
+        height: 2000px;
+        width: 252px;
+        background-color: rgb(253, 252, 252);
+        border: 1px solid rgb(221, 221, 221);
+        border-left: none;
+    }
+}
+
+
+/**
+内容样式
+右边部分样式
+*/
+
+.module-content {
+    width: 728px;
+    height: 700px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.module-content-title {
+    height: 40px;
+    width: 690px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 40px;
+    border-bottom: 2px solid #C10D0C;
+    .mo-content-title-i {
+        display: block;
+        float: left;
+        height: 40px;
+        margin: 0 10px 0 10px;
+        line-height: 40px;
+        font-size: 16px;
+        font-weight: 900;
+        color: #C10D0C;
+    }
+    .mo-content-title-a {
+        display: block;
+        float: left;
+        margin-right: 20px;
+        height: 40px;
+        font-size: 20px;
+        color: #333;
+    }
+    .mo-content-title-a:hover {
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .mo-content-title-ul {
+        float: left;
+        height: 40px;
+        li {
+            height: 40px;
+            line-height: 40px;
+            a {
+                color: #666;
+                font-size: 12px;
+            }
+        }
+        span {
+            margin-left: 10px;
+            margin-right: 10px;
+            color: #666;
+            font-weight: 600px;
+        }
+    }
+    .mo-content-title-p {
+        float: right;
+        height: 40px;
+        font-size: 12px;
+        a {
+            color: #666;
+        }
+        i {
+            color: #C10D0C;
+        }
+    }
+}
+
+
+/**
+内容样式
+左边部分样式
+*/
+.module-login{
+    height: 126px;
+    width: 251px;
+    background-color:rgba(247, 245, 245, 0.842);
+    box-shadow: 0px 0px 2px #888888;
+    p{
+        padding: 15px 20px 15px 20px;
+        color: #666;
+        line-height: 25px;
+    }
+    a{
+        display: block;
+        height: 30px;
+        width: 100px;
+        margin-left:auto;
+        margin-right:auto;  
+        background-color:#C20C0C; 
+        line-height: 30px;
+        font: 12px;
+        color: white;
+        text-align: center;
+    }
+    a:hover{
+        text-decoration: none;
+        background-color:rgb(207, 52, 52); 
+    }
+}
+
+
+
+
+/**
+总体自适应
+*/
+@media (max-width:982px) {
+    .wrap {
+        width: 982px;
+    }
+}

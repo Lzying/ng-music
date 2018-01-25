@@ -1,7 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
 $icon-font-path:"assets/bootstrap-sass-3.3.7/fonts/bootstrap/";
 @import "assets/bootstrap-sass-3.3.7/stylesheets/bootstrap";
-@import "assets/mystyles/mystyles.scss";
 @import "assets/font-awesome-4.7.0/css/font-awesome.min.css";
+@import "~ngx-bootstrap/datepicker/bs-datepicker.css";
 // @import "~animate.css/animate.min.css";
-// @import "~ngx-bootstrap/datepicker/bs-datepicker.css";
+
+
+@import "assets/mystyles/mystyles.scss";
+@import "assets/mystyles/mybootstrap.scss";
+
+body{
+    background: #f5f5f5;
+}

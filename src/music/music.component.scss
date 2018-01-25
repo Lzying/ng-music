@@ -23,39 +23,33 @@
     margin-right: auto;
     background-color: #242424;
     >h1 {
-        margin-right: 20px;
-        width: 176px;
+        width: 177px;
         height: 69px;
         float: left;
         a {
             display: block;
-            width: 176px;
+            width: 177px;
             height: 69px;
-            color: white;
-            font-size: 24px;
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
-            line-height: 69px;
-            letter-spacing: 2px;
+            background: url(../assets/imgs/download/topbar.png) no-repeat 0px 0px !important;
         }
         a:hover {
             cursor: pointer;
-            text-decoration: none;
         }
     }
     >ul {
+        font-size: 0;
         float: left;
         height: 69px;
         width: 510px;
         li {
+            float: left;
             margin: 0px;
-            padding-left: 15px;
-            padding-right: 15px;
+            padding-left: 19px;
+            padding-right: 19px;
             height: 69px;
             line-height: 69px;
             color: #ccc;
-            font-size: 14px;
-            font-weight: 540;
+            font-size: 14px !important;
         }
         li:hover {
             background-color: black;
@@ -95,11 +89,12 @@
         background-color: white;
         text-align: center;
         input {
-            width: 100px;
+            width: 110px;
             height: 32px;
             border: none;
         }
         i {
+            margin-left: -5px;
             font-size: 16px;
         }
     }
@@ -120,7 +115,7 @@
         margin-right: 10px;
         color: #787878;
     }
-    >a{
+    >a {
         cursor: pointer;
     }
     .login-list {
@@ -148,8 +143,7 @@
                     font-size: 14px;
                     margin-right: 10px;
                 }
-                .fa-mobile {
-                    height: 40px;
+                .login-list-i {
                     line-height: 40px;
                     font-size: 26px !important;
                     margin-right: 12px !important;

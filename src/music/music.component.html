@@ -3,7 +3,7 @@
     <div class="nav-list1">
         <div class="nav-mylist">
             <h1>
-                <a>@网易云音乐</a>
+                <a title="网易云音乐"></a>
             </h1>
             <ul class="list-inline">
                 <li>发现音乐</li>
@@ -17,12 +17,12 @@
             <div class="login" (mousemove)="loginList=true" (mouseleave)="loginList=flase">
                 <a> 登录</a>
                 <i class="fa fa-caret-down"></i>
-                
+
                 <div class="login-list" [style.display]="loginList? 'block' : 'none'">
                     <ul>
                         <li>
-                            <i class="fa fa-mobile"></i>
-                            <span>手机号登录</span>
+                            <i class="fa fa-mobile login-list-i"></i>
+                            <span> 手机号登录</span>
                         </li>
                         <li>
                             <i class="fa fa-weixin"></i>
@@ -49,7 +49,7 @@
             </div>
             <div class="nav-mylist-search">
                 <i class="fa fa-search"></i>
-                <input type="text">
+                <input type="text" placeholder="音乐/视频/电台/用户">
             </div>
 
         </div>
