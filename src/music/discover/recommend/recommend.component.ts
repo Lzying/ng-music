@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../../../assets/service/http.service';
 import { log } from 'util';
 
@@ -8,13 +8,23 @@ import { log } from 'util';
   styleUrls: ['./recommend.component.scss'],
   providers: [HttpService]
 })
-export class RecommendComponent implements OnInit{
-  http:any;
+export class RecommendComponent implements OnInit {
+  personalized: any;//热门推荐
   constructor(private httpservice: HttpService) { }
 
   ngOnInit() {
-      this.httpservice.getArticle()
-          .subscribe(data => this.http = data);
-      console.log(this.http);
+    /**
+     *  ajax请求
+     */
+    // this.httpservice.cla();
+
+    /**
+     *  http请求
+     */
+    this.personalized = this.httpservice.getArticleList();
+
+
+
+    console.log(this.personalized);
   }
 }
