@@ -52,7 +52,6 @@
     }
 }
 
-
 /**
 内容样式，划分左右两边
 */
@@ -80,15 +79,13 @@
     }
 }
 
-
 /**
 内容样式
-右边部分样式
+左边部分样式
 */
 
 .module-content {
     width: 728px;
-    height: 700px;
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -96,8 +93,7 @@
 .module-content-title {
     height: 40px;
     width: 690px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 10px auto 0px auto;
     line-height: 40px;
     border-bottom: 2px solid #C10D0C;
     .mo-content-title-i {
@@ -153,45 +149,179 @@
     }
 }
 
+.module-content-showHot {
+    width: 728px;
+    margin-left: auto;
+    margin-right: auto;
+    li {
+        display: inline-block;
+        margin: 21px 21px 0px 21px;
+        height: 200px;
+        width: 140px;
+        a {
+            display: block;
+            height: 140px;
+            width: 140px;
+            float: left;
+            img {
+                height: 140px;
+                width: 140px;
+                border: rgb(202, 200, 200) 1px solid;
+            }
+        }
+        p {
+            float: left;
+            line-height: 20px;
+            margin-top: 10px;
+            a {
+                font-size: 14px;
+                color: black;
+            }
+        }
+    }
+}
+
+.module-content-showNew {
+    position: relative;
+    z-index: 10px;
+    width: 690px;
+    height: 188px;
+    background: #f3f3f3;
+    margin: 20px auto 20px auto;
+    padding: 20px 22.5px 18px 22.5px;
+    .showNew-one {
+        position: absolute;
+        top: 20px;
+        left: 22.5px;
+        z-index: 11px;
+    }
+    .showNew-two {
+        position: absolute;
+        top: 20px;
+        left: 22.5px;
+        z-index: -1px;
+    }
+    .showNew-three {
+        position: absolute;
+        top: 20px;
+        left: 22.5px;
+        z-index: -2px;
+    }
+    .showNew {
+        width: 645px;
+        height: 150px;
+        li {
+            float: left;
+            height: 150px;
+            width: 120px;
+            margin: 0px 3px 0px 6px;
+            .showNew-a {
+                display: block;
+                width: 120px;
+                height: 100px; // background: #dbdada;
+                background: url(../../../assets/imgs/download/coverall.png) no-repeat 0px -570px !important;
+                img {
+                    height: 100px;
+                    width: 100px;
+                }
+            }
+            p {
+                width: 100px;
+                white-space: nowrap; // 防止输入字符过长影响布局，阻止换行
+                overflow: hidden; // 防止输入字符过长影响布局，隐藏内容
+                text-overflow: ellipsis; // 防止输入字符过长影响布局，溢出部分替换为...
+                a {
+                    color: #333;
+                }
+            }
+        }
+    }
+}
+
+.module-content-showTop {
+    width: 690px;
+    height: 800px;
+    margin: 20px auto 20px auto;
+    .showTop {
+        float: left;
+        width: 230px;
+        height: 470px;
+        box-shadow: 0px 0px 1px #888888;
+        .showTop-title {
+            width: 230px;
+            height: 140px;
+            padding: 20px;
+            a {
+                display: block;
+                float: left;
+                width: 80px;
+                height: 80px;
+                img {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+            >div {
+                float: left;
+            }
+        }
+        ul {
+            li:nth-child(odd) {
+                background: rgb(243, 243, 243);
+            }
+            li:nth-child(even) {
+                background: rgb(228, 227, 227);
+            }
+        }
+        .showTop-list {
+            height: 30px;
+            >a {
+                display: inline-block;
+                height: 30px;
+                line-height: 30px;
+                color: #666;
+            }
+        }
+    }
+}
 
 /**
 内容样式
-左边部分样式
+右边部分样式
 */
-.module-login{
+
+.module-login {
     height: 126px;
     width: 251px;
-    background-color:rgba(247, 245, 245, 0.842);
+    background-color: rgba(247, 245, 245, 0.842);
     box-shadow: 0px 0px 2px #888888;
-    p{
+    p {
         padding: 15px 20px 15px 20px;
         color: #666;
         line-height: 25px;
     }
-    a{
+    a {
         display: block;
         height: 30px;
         width: 100px;
-        margin-left:auto;
-        margin-right:auto;  
-        background-color:#C20C0C; 
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #C20C0C;
         line-height: 30px;
         font: 12px;
         color: white;
         text-align: center;
     }
-    a:hover{
+    a:hover {
         text-decoration: none;
-        background-color:rgb(207, 52, 52); 
+        background-color: rgb(207, 52, 52);
     }
 }
-
-
-
 
 /**
 总体自适应
 */
+
 @media (max-width:982px) {
     .wrap {
         width: 982px;

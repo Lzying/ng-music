@@ -23,7 +23,6 @@
                         <img src="http://p1.music.126.net/IEOjdxYprU8IxGAJaBQXMw==/109951163117354348.jpg" style="display: block; width: 100%;">
                     </a>
                 </slide>
-
             </carousel>
         </div>
         <div class="wrap-download">
@@ -52,7 +51,6 @@
                     <span>|</span>
                     <li>
                         <a href="#">摇滚</a>
-
                     </li>
                     <span>|</span>
                     <li>
@@ -69,17 +67,159 @@
                     <i class="fa fa-arrow-right"></i>
                 </p>
             </div>
-
-            <div>
-
+            <div class="module-content-showHot">
+                <ul>
+                    <li *ngFor="let personalized of personalizeds">
+                        <a href="#" title="{{personalized?.name}}">
+                            <img src="{{personalized?.picUrl}}" alt="{{personalized?.name}}">
+                        </a>
+                        <p>
+                            <a href=""> {{personalized?.name}}</a>
+                        </p>
+                    </li>
+                </ul>
             </div>
         </div>
+
+        <div class="module-content">
+            <div class="module-content-title">
+                <i class="fa fa-circle-o mo-content-title-i"></i>
+                <a class="mo-content-title-a" href="#">新碟上架</a>
+                <p class="mo-content-title-p">
+                    <a href="">更多</a>
+                    <i class="fa fa-arrow-right"></i>
+                </p>
+            </div>
+            <div class="module-content-showNew">
+                <ul class="showNew showNew-one">
+                    <li *ngFor="let topAlbum of topAlbumsOne">
+                        <a class="showNew-a" href="">
+                            <img src="{{topAlbum?.picUrl}}" alt="">
+                        </a>
+                        <p>
+                            <a href="">{{topAlbum?.name}} </a>
+                        </p>
+                        <p>
+                            <a href="">{{topAlbum?.name}} </a>
+                        </p>
+                    </li>
+                </ul>
+                <ul class="showNew showNew-two">
+                    <li *ngFor="let topAlbum of topAlbumsTwo">
+                        <a class="showNew-a" href="">
+                            <img src="{{topAlbum?.picUrl}}" alt="">
+                        </a>
+                        <p>
+                            <a href="">{{topAlbum?.name}} </a>
+                        </p>
+                        <p>
+                            <a href="">{{topAlbum?.name}} </a>
+                        </p>
+
+                    </li>
+                </ul>
+                <ul class="showNew showNew-three">
+                    <li *ngFor="let topAlbum of topAlbumsThree">
+                        <a class="showNew-a" href="">
+                            <img src="{{topAlbum?.picUrl}}" alt="">
+                        </a>
+                        <p>
+                            <a href="">{{topAlbum?.name}} </a>
+                        </p>
+                        <p>
+                            <a href="">{{topAlbum?.name}} </a>
+                        </p>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="module-content">
+            <div class="module-content-title">
+                <i class="fa fa-circle-o mo-content-title-i"></i>
+                <a class="mo-content-title-a" href="#">榜单</a>
+                <p class="mo-content-title-p">
+                    <a href="">更多</a>
+                    <i class="fa fa-arrow-right"></i>
+                </p>
+            </div>
+            <div class="module-content-showTop">
+                <div class="showTop">
+                    <ul>
+                        <li>
+                            <div class="showTop-title">
+                                <a href="#">
+                                    <img src="http://p3.music.126.net/sBzD11nforcuh1jdLSgX7g==/18740076185638788.jpg?param=100y100" alt="">
+                                </a>
+                                <div>
+                                    <p>音乐云飙升榜</p>
+                                    <p>
+                                        <i class="fa fa-play-circle-o"></i>
+                                        <i class="fa fa-plus-square-o"> </i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li *ngFor="let topList of topLists" class="showTop-list">
+                            <a href="">{{topList.name}}</a>
+                        </li>
+                        <li>hhh</li>
+                    </ul>
+                </div>
+                <div class="showTop">
+                    <ul class="table table-striped">
+                        <li>
+                            <div class="showTop-title">
+                                <a href="#">
+                                    <img src="http://p3.music.126.net/N2HO5xfYEqyQ8q6oxCw8IQ==/18713687906568048.jpg?param=100y100" alt="">
+                                </a>
+                                <div>
+                                    <p>音乐云新歌榜</p>
+                                    <p>
+                                        <i class="fa fa-play-circle-o"></i>
+                                        <i class="fa fa-plus-square-o"> </i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li *ngFor="let topNew of topNews" class="showTop-list">
+                            <a href="">{{topNew.name}}</a>
+                        </li>
+                        <li>hhh</li>
+                    </ul>
+                </div>
+                <div class="showTop">
+                    <ul>
+                        <li>
+                            <div class="showTop-title">
+                                <a href="#">
+                                    <img src="http://p3.music.126.net/sBzD11nforcuh1jdLSgX7g==/18740076185638788.jpg?param=100y100" alt="">
+                                </a>
+                                <div>
+                                    <p>网易原创歌曲榜</p>
+                                    <p>
+                                        <i class="fa fa-play-circle-o"></i>
+                                        <i class="fa fa-plus-square-o"> </i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li *ngFor="let topOrigina of topOriginas" class="showTop-list">
+                            <a href="">{{topOrigina.name}}</a>
+                        </li>
+                        <li>hhh</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
     </div>
     <div class="recommend-module-right">
         <div class="module-login">
             <p>登录网易云音乐，可以享受无限收藏的乐趣，并且无限同步到手机</p>
             <a href="">用户登录</a>
         </div>
-
     </div>
 </div>

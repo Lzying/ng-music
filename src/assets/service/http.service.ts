@@ -1,44 +1,65 @@
 import { Injectable } from '@angular/core';
-import {Http, Response, Jsonp } from '@angular/http';
+import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import * as $ from 'jquery';
 
 @Injectable()
 export class HttpService {
     constructor(
-        private http: Http, 
-        private jsonp: Jsonp  // 跨域需要用到jsonp来获取jsonp文件数据
+        private http: Http,
     ) { }
 
-        //获取本地的json数据
-        getArticleList(): any {
-            return this.http.get(`http://localhost:3000/personalized`);
-        }
+    //获取本地的json数据，热门推荐
+    personalized(): any {
+        return this.http.get(`http://localhost:3000/personalized`)
+            .map((res) => {
+                return res.json();
+            })
+    }
+    //新碟上架
+    topAlbum(): any {
+        return this.http.get(`http://localhost:3000/top/album?offset=0&limit=30`)
+            .map((res) => {
+                return res.json();
+            })
+    }
+    //飙升，新歌，原创
+    topList(): any {
+        return this.http.get(`http://localhost:3000/top/list?idx=3`)
+            .map((res) => {
+                return res.json();
+            })
+    }
 
-    // 获取跨域jsonp数据,出现错误
-    // getArticle(): any {
-    //     return this.jsonp.get(`http://localhost:3000/comment/music?id=186016&limit=1&callback=JSONP_CALLBACK`)
-    //     // &的前面是地址，后面JSONP_CALLBACK为函数，即为jsonp请求成功时调用JSONP_CALLBACK函数，写法callback=JSONP_CALLBACK
-    //         .map((response: Response) => { return response.json(); }
-    //         , (error) => { console.error(error); })
-    // }
+    topNew() {
+        return this.http.get(`http://localhost:3000/top/list?idx=0`)
+            .map((res) => {
+                return res.json();
+            })
+    }
+
+    topOriginal() {
+        return this.http.get(`http://localhost:3000/top/list?idx=2`)
+            .map((res) => {
+                return res.json();
+            })
+    }
 
 
-
-//ajax请求，跨域
-cla(){
-    $.ajax({
-        url: "http://localhost:3000/comment/music?id=186016&limit=1&callback=JSONP_CALLBACK",
-        //跨域设置
-        xhrFields: {
-          withCredentials: true
-        },
-        success: function (data) {
-          console.log(data)
-        },
-        error: function (err) {
-          console.log(err)
-        }
-      })
-}
+    //ajax请求，跨域
+    cla() {
+        $.ajax({
+            url: "http://localhost:3000/personalized",
+            //跨域设置
+            xhrFields: {
+                withCredentials: true
+            },
+            success: function (data) {
+                console.log(data)
+            },
+            error: function (err) {
+                console.log(err)
+            }
+        })
+    }
 }
