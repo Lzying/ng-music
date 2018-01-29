@@ -6,8 +6,8 @@
                 <a title="网易云音乐"></a>
             </h1>
             <ul class="list-inline">
-                <li>发现音乐</li>
-                <li>我的音乐</li>
+                <li routerLink="/music/discover">发现音乐</li>
+                <li routerLink="/music/mymusic">我的音乐</li>
                 <li>朋友</li>
                 <li>商城</li>
                 <li>音乐人</li>
@@ -55,7 +55,40 @@
         </div>
     </div>
     <div class="nav-list2">
-
+        <div class="nav-list2-list">
+            <ul>
+                <li>
+                    <a routerLink="/music/discover/recommend">
+                        <span>推荐</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/music/discover/toplist">
+                        <span>排行榜</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span>歌单</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span>主播电台</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span>歌手</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span>新碟上架</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
 <router-outlet></router-outlet>

@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './toplist.component.html',
   styleUrls: ['./toplist.component.scss']
 })
-export class MusicComponent {
+export class TopListComponent {
   title = 'app';
 }

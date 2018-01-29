@@ -39,7 +39,7 @@
                 width: 215px;
             }
             a:hover {
-                background: url(../../../assets/imgs/download/download.png) no-repeat 1px -340px !important;
+                background: url(../../../assets/imgs/download/download.png) no-repeat 0px -340px !important;
                 cursor: pointer;
             }
         }
@@ -153,12 +153,13 @@
     width: 728px;
     margin-left: auto;
     margin-right: auto;
-    li {
+    .showHot-list {
         display: inline-block;
         margin: 21px 21px 0px 21px;
         height: 200px;
         width: 140px;
         a {
+            position: relative;
             display: block;
             height: 140px;
             width: 140px;
@@ -168,8 +169,43 @@
                 width: 140px;
                 border: rgb(202, 200, 200) 1px solid;
             }
+            div {
+                position: absolute;
+                bottom: 0px;
+                height: 30px;
+                width: 100%;
+                padding-left: 10px;
+                padding-right: 10px;
+                background: #222222;
+                border-top: 1.5px solid black;
+                opacity: 0.6;
+                .showHot-list-p1 {
+                    display: inline-block;
+                    margin: 0px;
+                    width: 50px;
+                    height: 30px;
+                    line-height: 30px;
+                    color: #888888;
+                    font-size: 16px;
+                    text-align: left;
+                }
+                .showHot-list-p2 {
+                    display: inline-block;
+                    margin: 0px;
+                    width: 60px;
+                    height: 30px;
+                    line-height: 30px;
+                    color: #616060;
+                    font-size: 20px;
+                    text-align: right;
+                }
+                .showHot-list-p2 i:hover {
+                    color: white;
+                    opacity: 0.9;
+                }
+            }
         }
-        p {
+        >p {
             float: left;
             line-height: 20px;
             margin-top: 10px;
@@ -240,16 +276,16 @@
 
 .module-content-showTop {
     width: 690px;
-    height: 800px;
     margin: 20px auto 20px auto;
     .showTop {
         float: left;
         width: 230px;
-        height: 470px;
+        height: 450px;
+        background: rgb(243, 243, 243);
         box-shadow: 0px 0px 1px #888888;
         .showTop-title {
             width: 230px;
-            height: 140px;
+            height: 120px;
             padding: 20px;
             a {
                 display: block;
@@ -263,6 +299,25 @@
             }
             >div {
                 float: left;
+                width: 100px;
+                margin-left: 10px;
+                .showTop-title-title {
+                    margin-bottom: 10px;
+                    font-size: 14px;
+                    color: black;
+                    font-weight: bold;
+                }
+                .showTop-title-p i {
+                    font-size: 26px;
+                    margin-right: 10px;
+                    color: rgb(160, 160, 160);
+                    opacity: 0.7;
+                }
+                .showTop-title-p i:hover {
+                    opacity: 1 !important;
+                    color: rgb(126, 125, 125) !important;
+                    cursor: pointer;
+                }
             }
         }
         ul {
@@ -274,13 +329,75 @@
             }
         }
         .showTop-list {
+            width: 230px;
             height: 30px;
-            >a {
-                display: inline-block;
+            padding-left: 20px;
+            a {
+                display: block;
+                float: left;
+                margin-left: 5px;
+                height: 28px;
+                width: 150px;
+                line-height: 30px;
+                font-size: 12px;
+                color: #666;
+                white-space: nowrap; // 防止输入字符过长影响布局，阻止换行
+                overflow: hidden; // 防止输入字符过长影响布局，隐藏内容
+                text-overflow: ellipsis; // 防止输入字符过长影响布局，溢出部分替换为...
+            }
+            span {
+                display: block;
+                float: left;
+                color: #666;
                 height: 30px;
                 line-height: 30px;
+                width: 20px;
+                font-size: 16px;
+                text-align: center;
+            }
+            div {
+                display: none;
+                height: 28px;
+                width: 80px;
+                line-height: 28px;
+                font-size: 18px;
+                color: #a5a5a5;
+                i {
+                    margin-right: 6px;
+                }
+                i:hover {
+                    color: #888888;
+                    cursor: pointer;
+                }
+            }
+        }
+        .showTop-list:hover {
+            div {
+                display: block;
+                float: right;
+            }
+            a {
+                width: 100px;
+                height: 30px;
+                line-height: 30px;
+                white-space: nowrap; // 防止输入字符过长影响布局，阻止换行
+                overflow: hidden; // 防止输入字符过长影响布局，隐藏内容
+                text-overflow: ellipsis; // 防止输入字符过长影响布局，溢出部分替换为...
+            }
+        }
+        .showTop-last {
+            height: 30px;
+            padding-left: 20px;
+            padding-right: 30px;
+            text-align: right;
+            line-height: 30px;
+            a {
+                font-size: 14px;
                 color: #666;
             }
+        }
+        .showTop-last:hover {
+            cursor: pointer;
         }
     }
 }
@@ -315,6 +432,91 @@
     a:hover {
         text-decoration: none;
         background-color: rgb(207, 52, 52);
+    }
+}
+
+.hot-artists {
+    height: 126px;
+    width: 221px;
+    margin: 10px 15px 10px 15px;
+    .hot-artists-title {
+        height: 30px;
+        margin-bottom: 20px;
+        border-bottom: 1px rgb(161, 160, 160) solid;
+        p {
+            display: inline-block;
+            height: 30px;
+            color: black;
+            line-height: 30px;
+        }
+        a {
+            display: block;
+            float: right;
+            height: 30px;
+            color: #888888;
+            line-height: 30px;
+        }
+    }
+    .hot-artists-list {
+        width: 221px;
+        ul {
+            width: 221px;
+            li {
+                width: 221px;
+                height: 60px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                background: #faf9f9;
+                box-shadow: 0px 0px 2px #a5a5a5;
+                a {
+                    display: block;
+                    width: 221px;
+                    height: 60px;
+                    color: #888888;
+                }
+                a:hover {
+                    cursor: pointer;
+                }
+                img {
+                    height: 60px;
+                    width: 60px;
+                }
+                div {
+                    float: right;
+                    width: 140px;
+                    p {
+                        height: 29px;
+                        line-height: 29px;
+                        font-size: 14px;
+                        b {
+                            color: #222222;
+                        }
+                    }
+                }
+            }
+            li:hover {
+                background: #f5f5f5 !important;
+            }
+        }
+    }
+    .hot-artists-apply {
+        width: 221px;
+        height: 30px;
+        border-radius: 3px;
+        box-shadow: 0px 0px 2px #a5a5a5;
+        background: #faf9f9;
+        a {
+            display: block;
+            width: 221px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #222222;
+            font-size: 14px;
+        }
+        a:hover {
+            text-decoration: none;
+        }
     }
 }
 

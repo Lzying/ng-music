@@ -23,6 +23,17 @@
                         <img src="http://p1.music.126.net/IEOjdxYprU8IxGAJaBQXMw==/109951163117354348.jpg" style="display: block; width: 100%;">
                     </a>
                 </slide>
+                <slide>
+                        <a href="">
+                            <img src="http://p1.music.126.net/78klyfpq-ehARBXZyoK-Dg==/109951163122788649.jpg" style="display: block; width: 100%;">
+                        </a>
+                    </slide>
+                    <slide>
+                            <a href="">
+                                <img src="http://p1.music.126.net/ZfwaNLPQc8kyc790iQAHYA==/109951163122788565.jpg" style="display: block; width: 100%;">
+                            </a>
+                        </slide>
+                
             </carousel>
         </div>
         <div class="wrap-download">
@@ -34,6 +45,7 @@
         </div>
     </div>
 </div>
+
 <div class="recommend-module">
     <div class="recommend-module-left">
         <div class="module-content">
@@ -69,9 +81,17 @@
             </div>
             <div class="module-content-showHot">
                 <ul>
-                    <li *ngFor="let personalized of personalizeds">
+                    <li class="showHot-list" *ngFor="let personalized of personalizeds">
                         <a href="#" title="{{personalized?.name}}">
                             <img src="{{personalized?.picUrl}}" alt="{{personalized?.name}}">
+                            <div>
+                                <p class="showHot-list-p1">
+                                    <i class="fa fa-headphones"></i>
+                                </p>
+                                <p class="showHot-list-p2">
+                                    <i class="fa fa-play-circle-o"></i>
+                                </p>
+                            </div>
                         </a>
                         <p>
                             <a href=""> {{personalized?.name}}</a>
@@ -151,43 +171,59 @@
                         <li>
                             <div class="showTop-title">
                                 <a href="#">
-                                    <img src="http://p3.music.126.net/sBzD11nforcuh1jdLSgX7g==/18740076185638788.jpg?param=100y100" alt="">
+                                    <img src="http://p4.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg?param=100y100" alt="">
                                 </a>
                                 <div>
-                                    <p>音乐云飙升榜</p>
-                                    <p>
+                                    <p class="showTop-title-title">音乐云飙升榜</p>
+                                    <p class="showTop-title-p">
                                         <i class="fa fa-play-circle-o"></i>
                                         <i class="fa fa-plus-square-o"> </i>
                                     </p>
                                 </div>
                             </div>
                         </li>
-                        <li *ngFor="let topList of topLists" class="showTop-list">
+                        <li *ngFor="let topList of topLists;let topindex=index" class="showTop-list">
+                            <span [style.color]="(topindex==0 || topindex==1 || topindex==2) ? 'red' : '#666'">{{topindex+1}}</span>
                             <a href="">{{topList.name}}</a>
+                            <div>
+                                <i class="fa fa-play-circle-o"></i>
+                                <i class="fa fa-plus"></i>
+                                <i class="fa fa-plus-square-o"> </i>
+                            </div>
                         </li>
-                        <li>hhh</li>
+                        <li class="showTop-last">
+                            <a href="">查看全部></a>
+                        </li>
                     </ul>
                 </div>
                 <div class="showTop">
-                    <ul class="table table-striped">
+                    <ul>
                         <li>
                             <div class="showTop-title">
                                 <a href="#">
                                     <img src="http://p3.music.126.net/N2HO5xfYEqyQ8q6oxCw8IQ==/18713687906568048.jpg?param=100y100" alt="">
                                 </a>
                                 <div>
-                                    <p>音乐云新歌榜</p>
-                                    <p>
+                                    <p class="showTop-title-title">音乐云新歌榜</p>
+                                    <p class="showTop-title-p">
                                         <i class="fa fa-play-circle-o"></i>
                                         <i class="fa fa-plus-square-o"> </i>
                                     </p>
                                 </div>
                             </div>
                         </li>
-                        <li *ngFor="let topNew of topNews" class="showTop-list">
+                        <li *ngFor="let topNew of topNews; let topindex=index" class="showTop-list">
+                            <span [style.color]="(topindex==0 || topindex==1 || topindex==2) ? 'red' : '#666'">{{topindex+1}}</span>
                             <a href="">{{topNew.name}}</a>
+                            <div>
+                                <i class="fa fa-play-circle-o"></i>
+                                <i class="fa fa-plus"></i>
+                                <i class="fa fa-plus-square-o"> </i>
+                            </div>
                         </li>
-                        <li>hhh</li>
+                        <li class="showTop-last">
+                            <a href="">查看全部></a>
+                        </li>
                     </ul>
                 </div>
                 <div class="showTop">
@@ -198,18 +234,26 @@
                                     <img src="http://p3.music.126.net/sBzD11nforcuh1jdLSgX7g==/18740076185638788.jpg?param=100y100" alt="">
                                 </a>
                                 <div>
-                                    <p>网易原创歌曲榜</p>
-                                    <p>
+                                    <p class="showTop-title-title">网易原创歌曲榜</p>
+                                    <p class="showTop-title-p">
                                         <i class="fa fa-play-circle-o"></i>
                                         <i class="fa fa-plus-square-o"> </i>
                                     </p>
                                 </div>
                             </div>
                         </li>
-                        <li *ngFor="let topOrigina of topOriginas" class="showTop-list">
+                        <li *ngFor="let topOrigina of topOriginas ;let topindex=index" class="showTop-list">
+                            <span [style.color]="(topindex==0 || topindex==1 || topindex==2) ? 'red' : '#666'">{{topindex+1}}</span>
                             <a href="">{{topOrigina.name}}</a>
+                            <div>
+                                <i class="fa fa-play-circle-o"></i>
+                                <i class="fa fa-plus"></i>
+                                <i class="fa fa-plus-square-o"> </i>
+                            </div>
                         </li>
-                        <li>hhh</li>
+                        <li class="showTop-last">
+                            <a href="">查看全部></a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -220,6 +264,34 @@
         <div class="module-login">
             <p>登录网易云音乐，可以享受无限收藏的乐趣，并且无限同步到手机</p>
             <a href="">用户登录</a>
+        </div>
+        <div class="hot-artists">
+            <div class="hot-artists-title">
+                <p>
+                    <b>热门歌手</b>
+                </p>
+                <a href="">查看全部></a>
+            </div>
+            <div class="hot-artists-list">
+                <ul>
+                    <li *ngFor="let topArtist of topArtists">
+                        <a href="">
+                            <img src="{{topArtist.img1v1Url}}" alt="">
+                            <div>
+                                <p>
+                                    <b>{{topArtist.name}}</b>
+                                </p>
+                                <p>歌手信息暂无</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hot-artists-apply">
+                <a href="">
+                    <b> 申请成为网易音乐人</b>
+                </a>
+            </div>
         </div>
     </div>
 </div>

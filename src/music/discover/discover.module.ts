@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { DiscoverRoute } from './discover.route';
 import { RecommendModule } from './recommend/recommend.module';
+import { TopListModule } from './toplist/toplist.module';
 
 import { DiscoverComponent } from './discover.component';
 
@@ -12,6 +13,7 @@ import { DiscoverComponent } from './discover.component';
   ],
   imports: [
     RecommendModule,
+    TopListModule,
     RouterModule.forChild(DiscoverRoute)
   ],
   providers: [],
