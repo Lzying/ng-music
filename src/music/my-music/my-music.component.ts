@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./my-music.component.scss']
 })
 export class MyMusicComponent {
-  title = 'app';
+  
 }
