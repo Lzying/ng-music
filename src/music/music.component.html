@@ -57,12 +57,36 @@
     <div class="nav-list2">
         <div class="nav-list2-list">
             <ul>
-                <li *ngFor="let localTitle of localTitles;let isIndex=index" (click)="isindex=isIndex" >
-                    <a routerLink="{{localTitle.route}}">
-                        <span [class.nav-list2-list-span]="isindex==isIndex">{{localTitle.name}}</span>
+                <li>
+                    <a routerLink="/music/discover/recommend">
+                        <span>推荐</span>
                     </a>
                 </li>
-                
+                <li>
+                    <a routerLink="/music/discover/toplist">
+                        <span>排行榜</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span>歌单</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span>主播电台</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span>歌手</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span>新碟上架</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

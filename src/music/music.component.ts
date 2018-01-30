@@ -1,17 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { LocalService } from '../assets/service/local.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-music',
   templateUrl: './music.component.html',
-  styleUrls: ['./music.component.scss'],
-  providers: [LocalService]
+  styleUrls: ['./music.component.scss']
 })
-export class MusicComponent implements OnInit {
+export class MusicComponent {
   loginList = false;
-  localTitles: any;
-  constructor(private localService: LocalService) { }
-  ngOnInit() {
-    this.localTitles = this.localService.localTitle();
-  }
 }

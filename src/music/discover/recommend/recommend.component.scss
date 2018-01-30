@@ -60,18 +60,21 @@
     margin-left: auto;
     margin-right: auto;
     width: 982px;
-    border: 1px solid rgb(221, 221, 221);
+    height: 2000px;
     .recommend-module-left {
         float: left;
-        width: 729px;
+        height: 2000px;
+        width: 730px;
         background-color: white;
-        border-left: 1px solid rgb(221, 221, 221);
+        border: 1px solid rgb(221, 221, 221);
         border-top: none;
     }
     .recommend-module-right {
         float: left;
-        width: 250px;
+        height: 2000px;
+        width: 252px;
         background-color: rgb(253, 252, 252);
+        border: 1px solid rgb(221, 221, 221);
         border-left: none;
     }
 }

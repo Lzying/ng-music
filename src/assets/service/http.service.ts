@@ -9,19 +9,6 @@ export class HttpService {
         private http: Http,
     ) { }
 
-    localTitle() {
-        let musicTopList = [
-            { name: "推荐", route: "/music/discover/recommend" },
-            { name: "排行榜", route: "/music/discover/toplist" },
-            { name: "歌单", route: "/music/discover/recommend" },
-            { name: "主播电台", route: "/music/discover/recommend" },
-            { name: "歌手", route: "/music/discover/toplist" },
-            { name: "新碟上架", route: "/music/discover/toplist" },
-        ];
-        return musicTopList;
-    }
-
-
     //轮播图数据，比较旧不用,
     bannerLists() {
         return this.http.get(`http://localhost:3000/banner`)

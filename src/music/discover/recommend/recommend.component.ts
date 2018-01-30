@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../../../assets/service/http.service';
+import { log } from 'util';
 
 @Component({
     selector: 'app-recommend',
@@ -32,6 +33,8 @@ export class RecommendComponent implements OnInit {
         this.httpservice.bannerLists()
             .subscribe((data) => {
                 this.bannerLists = data.banners;
+                console.log(this.bannerLists);
+
             });
 
         /**
@@ -40,6 +43,7 @@ export class RecommendComponent implements OnInit {
         this.httpservice.personalized()
             .subscribe((data) => {
                 this.personalizeds = data.result.slice(0, 8);
+
             });
 
 
@@ -58,6 +62,7 @@ export class RecommendComponent implements OnInit {
         this.httpservice.topList()
             .subscribe((data) => {
                 this.topLists = data.playlist.tracks.slice(0, 10);
+                console.log(this.topLists);
             });
         /**
         *  音乐云新歌榜
@@ -65,6 +70,7 @@ export class RecommendComponent implements OnInit {
         this.httpservice.topNew()
             .subscribe((data) => {
                 this.topNews = data.playlist.tracks.slice(0, 10);
+                console.log(this.topNews);
             });
         /**
         *  网易原创歌曲榜
@@ -72,6 +78,7 @@ export class RecommendComponent implements OnInit {
         this.httpservice.topOriginal()
             .subscribe((data) => {
                 this.topOriginas = data.playlist.tracks.slice(0, 10);
+                console.log(this.topOriginas);
             });
 
         /**
@@ -79,7 +86,9 @@ export class RecommendComponent implements OnInit {
         */
         this.httpservice.topArtists().subscribe((data) => {
             this.topArtists = data.artists.slice(0, 5);
+            console.log(this.topArtists);
         });
+
 
     }
 

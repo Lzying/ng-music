@@ -6,8 +6,8 @@ export const DiscoverRoute = [
         component: DiscoverComponent,
         children: [
             { path: '', redirectTo: 'recommend', pathMatch: 'full' },
-            { path: 'recommend', loadChildren: './recommend/recommend.module#RecommendModule' },
-            { path: 'toplist', loadChildren: './toplist/toplist.module#TopListModule' },
+            { path: 'recommend', loadChildren: 'discover/recommend/recommend.module#RecommendModule' },
+            { path: 'toplist', loadChildren: 'discover/toplist/toplist.module#TopListModule' },
             { path: '**', redirectTo: 'recommend' }
         ]
 
