@@ -6,7 +6,9 @@
                 <b> 云音乐特色榜</b>
             </p>
             <ul class="music-top-lists">
-                <li *ngFor="let musicTopList of musicTopLists; " (click)="musicTop(musicTopList.id);id=musicTopList.id" [class.music-top-li]="id==musicTopList.id">
+                <li *ngFor="let musicTopList of musicTopLists; " (click)="musicTop(musicTopList.getid);
+                topCommend(musicTopList.id, 1);
+                id=musicTopList.id" [class.music-top-li]="id==musicTopList.id">
                     <img src="{{musicTopList.ImgUrl}}" alt="">
                     <div>
                         <p>{{musicTopList.name}}</p>
@@ -64,13 +66,8 @@
                         </a>
                     </li>
                 </ul>
-
-
-
-
             </div>
         </div>
-
         <div class="content-list">
             <div class="content-list-title">
                 <p>播放：
@@ -101,6 +98,93 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+
+        </div>
+        <div class="commend">
+            <div class="commend-title">
+                <p>
+                    <span class="commend-title-text1">评论</span>
+                    <span class="commend-title-text2">共{{topCommends?.total}}条评论</span>
+                </p>
+            </div>
+            <div class="my-commend clearfix">
+                <img height="50" width="50" src="http://s4.music.126.net/style/web2/img/default/default_avatar.jpg?param=50y50" alt="">
+                <div>
+                    <textarea placeholder="评论"></textarea>
+                    <div>
+                        <p>评论</p>
+                        <p>评论</p>
+                    </div>
+                </div>
+            </div>
+            <div class="commend-content">
+                <div class="commend-list" *ngIf="topCommends?.hotComments">
+                    <p class="commend-list-title">
+                        <b>精彩评论</b>
+                    </p>
+                    <ul class="commend-list-ul">
+                        <li class="clearfix" *ngFor="let hotComment of topCommends?.hotComments">
+                            <img height="50" width="50" src="{{hotComment.user.avatarUrl}}" alt="">
+                            <div class="commend-list-text">
+                                <p>
+                                    <a href="">{{hotComment.user.nickname}}</a>
+                                    <span>:{{hotComment.content}}</span>
+                                </p>
+                                <div>
+                                    <p>
+                                        <a href="">
+                                            <i class="fa fa-thumbs-o-up"></i>
+                                            <span *ngIf="hotComment?.likedCount">({{hotComment?.likedCount}})</span>
+                                        </a>
+                                        <a href="">回复</a>
+                                    </p>
+                                    <span>{{hotComment?.time}}</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="commend-list">
+                    <p class="commend-list-title">
+                        <b>最新评论</b>
+                    </p>
+                    <ul class="commend-list-ul">
+                        <li class="clearfix" *ngFor="let comment of topCommends?.comments">
+                            <img height="50" width="50" src="{{comment?.user.avatarUrl}}" alt="">
+                            <div class="commend-list-text">
+                                <p class="commend-list-text-p">
+                                    <a href="">{{comment?.user.nickname}}</a>
+                                    <span>:{{comment?.content}}</span>
+                                </p>
+                                <p class="commend-list-text-p" *ngIf="comment?.beReplied[0]?.content">
+                                    <a href="">{{comment?.beReplied[0].user.nickname}}</a>
+                                    <span>:{{comment?.beReplied[0].content}}</span>
+                                </p>
+                                <div>
+                                    <p>
+                                        <a href="">
+                                            <i class="fa fa-thumbs-o-up"></i>
+                                            <span *ngIf="comment?.likedCount">({{comment?.likedCount}})</span>
+                                        </a>
+                                        <a href="">回复</a>
+                                    </p>
+                                    <span>{{comment?.time}}</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="commend-nav">
+                <div class="row">
+                    <div class="col-xs-12 col-12">
+                        <pagination [totalItems]="totalItems" [itemsPerPage]="itemsPerPage" [maxSize]="maxSize" [boundaryLinks]="true" [(ngModel)]="currentPage"
+                            (pageChanged)="pageChanged($event)" class="pagination-sm" previousText="上页" nextText="下页" firstText="首页"
+                            lastText="尾页"></pagination>
+                    </div>
+                </div>
+                <p>共{{pages}}页</p>
             </div>
 
         </div>

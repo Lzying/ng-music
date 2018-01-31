@@ -6,13 +6,11 @@
     .toplist-left {
         float: left;
         width: 240px;
-        height: 3400px;
         background: rgb(250, 249, 249);
     }
     .toplist-right {
         float: left;
         width: 740px;
-        height: 3400px;
         background: white;
         border-left: 1px rgb(184, 183, 182) solid;
     }
@@ -100,7 +98,7 @@
                 margin-right: 5px;
                 border-radius: 5px;
                 box-shadow: 0px 0px 1px rgb(156, 156, 156);
-                background: #f7f7f7;
+                background: #f7f7f7a6;
                 a {
                     display: inline-block;
                     height: 30px;
@@ -216,6 +214,124 @@
         tr:nth-child(even) {
             background: white;
         }
+    }
+}
+
+.commend {
+    width: 670px;
+    margin: 50px auto 50px 40px;
+    .commend-title {
+        height: 40px;
+        line-height: 40px;
+        border-bottom: solid 2px rgb(182, 17, 17);
+        .commend-title-text1 {
+            margin-right: 20px;
+            font-size: 22px;
+            color: #666;
+        }
+        .commend-title-text2 {
+            font-size: 12px;
+            color: #666;
+        }
+    }
+    .my-commend {
+        width: 670px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        img {
+            float: left;
+        }
+        >div {
+            height: 98px;
+            width: 608px;
+            float: right;
+            textarea {
+                height: 60px;
+                width: 608px;
+                resize: none;
+            }
+            textarea:focus {
+                outline: none
+            }
+        }
+    }
+}
+
+.commend-list {
+    width: 670px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    .commend-list-title {
+        width: 670px;
+        font-size: 14px;
+        border-bottom: 1px solid #cfcfcf;
+    }
+    .commend-list-ul {
+        width: 670px;
+        li {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-top: 1px dotted #ccc;
+            img {
+                float: left;
+            }
+            .commend-list-text {
+                width: 608px;
+                float: right;
+               .commend-list-text-p {
+                    width: 608px;
+                    margin-bottom: 10px;
+                    padding-right: 10px;
+                }
+                >p:nth-child(2){
+                    background: rgb(241, 240, 240);
+                    width: 608px;
+                    padding: 10px;
+                    margin-bottom:10px;  
+                    margin-left:10px; 
+                }
+                >div {
+                    width: 608px;
+                    p {
+                        width: 100px;
+                        float: right;
+                        text-align: right;
+                        a:nth-child(1) {
+                            color: #666;
+                            font-size: 12px;
+                            border-right: 1px solid #666;
+                            padding-right: 5px;
+                            i {
+                                color: rgb(11, 104, 167);
+                                font-size: 15px;
+                            }
+                        }
+                        a:nth-child(2) {
+                            color: #666;
+                            font-size: 12px;
+                            padding-left: 5px;
+                        }
+                    }
+                    >span{
+                        color: #666;
+                    }
+                }
+            }
+        }
+        li:nth-child(1) {
+            border-top: 0px !important;
+        }
+    }
+}
+
+.commend-nav {
+    width: 608px;
+    >div {
+        margin-left: 120px;
+    }
+    p {
+        width: 608px;
+        text-align: center;
     }
 }
 

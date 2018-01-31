@@ -3,9 +3,11 @@ import { RouterModule } from '@angular/router';
 import { FormsModule }   from '@angular/forms';
 import { CommonModule } from '@angular/common'; 
 import { TopListRoute } from './toplist.route';
+import { PaginationModule } from 'ngx-bootstrap/pagination'
 
 
 import { TopListComponent } from './toplist.component';
+
 
 
 @NgModule({
@@ -14,6 +16,7 @@ import { TopListComponent } from './toplist.component';
   ],
   imports: [
     RouterModule.forChild(TopListRoute),
+    PaginationModule.forRoot(),
     FormsModule,
     CommonModule
   ],
