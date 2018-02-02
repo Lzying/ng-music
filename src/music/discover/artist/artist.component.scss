@@ -12,7 +12,6 @@
     }
     .artist-model {
         width: 799px;
-        height: 1000px;
         padding: 40px;
         float: right;
         border-left: 1px #666 solid;
@@ -38,18 +37,23 @@
     }
 }
 
+.artist-model-top {
+    margin-bottom: 20px;
+}
+
 .artist-model-top-ul {
+    width: 719px;
     li {
         height: 160px;
         width: 130px;
         display: inline-block;
-        margin-right:17px; 
-        margin-top:20px; 
+        margin-right: 17px;
+        margin-top: 20px;
         .artist-model-top-img {
             position: relative;
             height: 130px;
             width: 130px;
-            a{
+            a {
                 position: absolute;
                 display: block;
                 top: 0px;
@@ -58,12 +62,29 @@
                 width: 130px;
                 background: url(../../../assets/imgs/download/coverall.png) no-repeat 0px 0px !important;
             }
-            a:hover{
+            a:hover {
                 cursor: pointer;
             }
         }
     }
-    li:nth-child(5n+5){
-        margin-right:0px; 
+    li:nth-child(5n+5) {
+        margin-right: 0px;
+    }
+}
+
+.artist-model-list {
+    width: 719px;
+    border-top: 1px #666 dotted;
+    ul {
+        li {
+            width: 130px;
+            display: inline-block;
+            margin-right: 17px;
+            margin-top: 20px;
+            text-align: left;
+        }
+        li:nth-child(5n+5) {
+            margin-right: 0px;
+        }
     }
 }

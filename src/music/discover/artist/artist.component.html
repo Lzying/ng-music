@@ -15,7 +15,9 @@
                         <img width="130" height="130" src="{{artist?.img1v1Url}}" alt="">
                         <a href=""></a>
                     </div>
-                    <p>{{artist?.name}}</p>
+                    <p>
+                        <a href="">{{artist?.name}}</a>
+                    </p>
                 </li>
             </ul>
         </div>
@@ -33,7 +35,18 @@
                         <img width="130" height="130" src="{{artist?.img1v1Url}}" alt="">
                         <a href=""></a>
                     </div>
-                    <p>{{artist?.name}}</p>
+                    <p>
+                        <a href="">{{artist?.name}}</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="artist-model-list">
+            <ul>
+                <li *ngFor="let artistList of artistLists">
+                    <a href="">
+                        <span>{{artistList?.name}}</span>
+                    </a>
                 </li>
             </ul>
         </div>

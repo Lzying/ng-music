@@ -9,11 +9,13 @@ import { ArtistService } from '../../../assets/service/artist.service';
 })
 export class ArtistComponent implements OnInit {
   artists:any;
+  artistLists:any;
   constructor(private artistService: ArtistService) { }
   ngOnInit() {
     this.artistService.artist().subscribe(data=>{
       this.artists=data["artists"].slice(0, 10);
-      console.log(data);
+      this.artistLists=data["artists"].slice(10);
+      console.log(this.artistLists);
     })
   }
 }

@@ -13,7 +13,7 @@ export class ArtistService {
 
     //歌单 api中的歌单 ( 网友精选碟 )，sonSheet可选为hot 和 new
     artist() {
-        return this.httpClient.get(`http://localhost:3000/top/artists?offset=0&limit=30&id=1003`)
+        return this.httpClient.get(`http://localhost:3000/top/artists?offset=0&limit=100`)
           
     }
 
