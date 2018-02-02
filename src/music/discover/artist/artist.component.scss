@@ -1,0 +1,69 @@
+.artist {
+    width: 982px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    border-left: 1px #666 solid;
+    border-right: 1px #666 solid;
+    .artist-nav {
+        width: 180px;
+        float: left;
+        background: white;
+    }
+    .artist-model {
+        width: 799px;
+        height: 1000px;
+        padding: 40px;
+        float: right;
+        border-left: 1px #666 solid;
+        background: white;
+    }
+}
+
+.artist-model-title {
+    height: 50px;
+    width: 719px;
+    line-height: 50px;
+    border-bottom: 2px rgb(177, 11, 11) solid;
+    a {
+        display: block;
+        float: right;
+        color: #666;
+    }
+    a:hover {
+        cursor: pointer;
+    }
+    span {
+        font-size: 20px;
+    }
+}
+
+.artist-model-top-ul {
+    li {
+        height: 160px;
+        width: 130px;
+        display: inline-block;
+        margin-right:17px; 
+        margin-top:20px; 
+        .artist-model-top-img {
+            position: relative;
+            height: 130px;
+            width: 130px;
+            a{
+                position: absolute;
+                display: block;
+                top: 0px;
+                left: 0px;
+                height: 130px;
+                width: 130px;
+                background: url(../../../assets/imgs/download/coverall.png) no-repeat 0px 0px !important;
+            }
+            a:hover{
+                cursor: pointer;
+            }
+        }
+    }
+    li:nth-child(5n+5){
+        margin-right:0px; 
+    }
+}

@@ -1,1 +1,41 @@
 <!-- 歌手 -->
+<div class="artist clearfix">
+    <div class="artist-nva"></div>
+    <div class="artist-model">
+        <div class="artist-model-top">
+            <div class="artist-model-title clearfix">
+                <a href="">更多></a>
+                <span>
+                    <b>入驻歌手</b>
+                </span>
+            </div>
+            <ul class="artist-model-top-ul">
+                <li *ngFor="let artist of artists">
+                    <div class="artist-model-top-img">
+                        <img width="130" height="130" src="{{artist?.img1v1Url}}" alt="">
+                        <a href=""></a>
+                    </div>
+                    <p>{{artist?.name}}</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="artist-model-top">
+            <div class="artist-model-title clearfix">
+                <a href="">更多></a>
+                <span>
+                    <b>热门歌手</b>
+                </span>
+            </div>
+            <ul class="artist-model-top-ul">
+                <li *ngFor="let artist of artists">
+                    <div class="artist-model-top-img">
+                        <img width="130" height="130" src="{{artist?.img1v1Url}}" alt="">
+                        <a href=""></a>
+                    </div>
+                    <p>{{artist?.name}}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

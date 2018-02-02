@@ -9,7 +9,7 @@ export class LocalService {
             { name: "排行榜", route: "/music/discover/toplist" },
             { name: "歌单", route: "/music/discover/playlist" },
             { name: "主播电台", route: "/music/discover/toplist" },
-            { name: "歌手", route: "/music/discover/recommend" },
+            { name: "歌手", route: "/music/discover/artist" },
             { name: "新碟上架", route: "/music/discover/toplist" },
         ];
         return musicTopList;

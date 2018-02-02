@@ -16,8 +16,6 @@ export class PlayListComponent implements OnInit {
 
     ngOnInit() {
         this.total("hot", 1);
-
-
     }
 
     /**
