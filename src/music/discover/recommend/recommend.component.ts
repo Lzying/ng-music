@@ -40,6 +40,16 @@ export class RecommendComponent implements OnInit {
         this.httpservice.personalized()
             .subscribe((data) => {
                 this.personalizeds = data.result.slice(0, 8);
+                //格式化播放量，大于等于100000修改为 以万为单位
+                this.personalizeds.forEach(item => {
+                    if (item.playCount >= 100000) {
+                        item.playCount = Math.floor(item.playCount / 10000) + "万";
+                    }else{
+                        item.playCount = Math.floor(item.playCount);//由于有些数据是小数，所以取整
+                    }
+
+                });
+                console.log(this.personalizeds);
             });
 
 

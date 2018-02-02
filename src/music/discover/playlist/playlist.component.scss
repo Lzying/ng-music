@@ -1,0 +1,170 @@
+.playlist-module {
+    width: 982px;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 1px solid rgb(172, 171, 171);
+    border-right: 1px solid rgb(172, 171, 171);
+    padding: 40px;
+    background: white;
+    .playlist {
+        width: 902px;
+    }
+}
+
+.playlist-title {
+    width: 900px;
+    margin-bottom: 30px;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 2px solid rgb(129, 11, 11);
+    .playlist-title-left {
+        float: left;
+        p {
+            display: inline-block;
+            font-size: 22px;
+            margin-right: 10px;
+        }
+        a {
+            display: inline-block;
+            height: 30px;
+            width: 100px;
+            background: rgb(238, 237, 237);
+            border: 1px solid #666;
+            color: rgb(5, 154, 253);
+            text-align: center;
+            line-height: 30px;
+        }
+    }
+    .playlist-title-right {
+        float: right;
+        a {
+            display: inline-block;
+            height: 25px;
+            width: 50px;
+            line-height: 25px;
+            text-align: center;
+            color: black;
+            background: rgb(241, 241, 241);
+            border-radius: 3px;
+            border: 1px solid #666;
+        }
+        a:hover {
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .playlist-title-right-a {
+            background: rgb(228, 7, 7) !important;
+            color: white;
+            border: 1px solid rgb(228, 7, 7);
+        }
+    }
+}
+
+.playliat-connet {
+    width: 900px;
+    min-height: 1000px;
+    .playlist-connet-list {
+        width: 900px;
+        li {
+            margin-right: 50px;
+            margin-bottom:30px; 
+            display: inline-block;
+            height: 180px;
+            width: 140px;
+            .playlist-connet-list-img {
+                position: relative;
+                height: 140px;
+                width: 140px;
+                margin-bottom: 5px;
+                >a {
+                    display: block;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    height: 140px;
+                    width: 140px;
+                    z-index: 11px;
+                    background: url(../../../assets/imgs/download/coverall.png) no-repeat 0px 0px !important;
+                }
+                .playlist-connet-list-play {
+                    position: absolute;
+                    z-index: 12px;
+                    top: 110px;
+                    left: 0px;
+                    height: 30px;
+                    width: 140px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    background: #222222;
+                    border-top: 1.5px solid rgb(104, 103, 103);
+                    opacity: 0.6;
+                    p:nth-child(1) {
+                        float: left;
+                        width: 80px;
+                        line-height: 30px;
+                        opacity: 1 !important;
+                        text-align: left;
+                        color: #d1cece;
+                        font-size: 17px;
+                        span{
+                            font-size: 12px;
+                        }
+                    }
+                    p:nth-child(2) {
+                        float: right;
+                        width: 30px;
+                        line-height: 30px;
+                        opacity: 1 !important;
+                        text-align: right;
+                        a {
+                            font-size: 18px;
+                            color: #b8b6b6;
+                            opacity: 1 !important;
+                        }
+                        a:hover {
+                            color: white;
+                        }
+                    }
+                }
+            }
+            >p {
+                height: 20px;
+                line-height: 20px;
+                width: 140px;
+                white-space: nowrap; // 防止输入字符过长影响布局，阻止换行
+                overflow: hidden; // 防止输入字符过长影响布局，隐藏内容
+                text-overflow: ellipsis; // 防止输入字符过长影响布局，溢出部分替换为...
+                a:nth-child(1) {
+                    color: rgb(27, 27, 27);
+                    font-size: 14px;
+                }
+                a:nth-child(2) {
+                    color: #666;
+                    font-size: 12px;
+                }
+                a {
+                    cursor: pointer;
+                }
+                span {
+                    color: rgb(151, 150, 150);
+                    font-size: 12px;
+                    margin-right: 5px;
+                }
+            }
+        }
+        li:nth-child(5n+5) {
+            margin-right: 0px;
+        } //5的倍数元素
+    }
+}
+
+.commend-nav {
+    width: 608px;
+    >div {
+        margin-left: 120px;
+    }
+    p {
+        width: 608px;
+        text-align: center;
+    }
+}

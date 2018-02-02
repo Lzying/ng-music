@@ -1,1 +1,58 @@
 <!-- 歌单 -->
+<div class="playlist-module">
+    <div class="playlist">
+        <div class="playlist-title clearfix">
+            <div class="playlist-title-left">
+                <p>全部</p>
+                <a href="">选择分类</a>
+            </div>
+            <div class="playlist-title-right">
+                <a (click)="total('hot',1);selected='hot'" [class.playlist-title-right-a]="selected=='hot'" title="热门">热门</a>
+                <a (click)="total('new',1);selected='new'" [class.playlist-title-right-a]="selected=='new'" title="最新">最新</a>
+            </div>
+
+        </div>
+        <div class="playliat-connet">
+            <ul class="playlist-connet-list">
+                <li *ngFor="let playListService of playListServices">
+                    <div class="playlist-connet-list-img">
+                        <img height="140" width="140" src="{{playListService?.coverImgUrl}}" alt="">
+                        <a href="" title="{{playListService?.name}}"></a>
+                        <div class="playlist-connet-list-play">
+                            <p>
+                                <i class="fa fa-headphones"></i>
+                                <span>{{playListService.playCount}}</span>
+                            </p>
+                            <p>
+                                <a href="">
+                                    <i class="fa fa-play-circle-o"></i>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <p>
+                        <a>{{playListService?.name}}</a>
+                    </p>
+                    <p>
+                        <span>by</span>
+                        <a>{{playListService?.creator.nickname}}</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 分页导航，采用ngx插件 -->
+    <div class="commend-nav">
+        <div class="row">
+            <div class="col-xs-12 col-12">
+                <pagination [totalItems]="totalItems" [itemsPerPage]="itemsPerPage" [maxSize]="maxSize" [boundaryLinks]="true" [(ngModel)]="currentPage"
+                    (pageChanged)="pageChanged($event)" class="pagination-sm" previousText="上页" nextText="下页" firstText="首页"
+                    lastText="尾页"></pagination>
+            </div>
+        </div>
+        <p>共{{pages}}页</p>
+    </div>
+
+
+</div>

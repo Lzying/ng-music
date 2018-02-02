@@ -1,14 +1,15 @@
 <!-- 排行榜 -->
 <div class="toplist clearfix">
+    <!-- 左边导航部分 -->
     <div class="toplist-left">
-        <div class="music-top">
+        <div class="music-top-nav">
             <p>
                 <b> 云音乐特色榜</b>
             </p>
             <ul class="music-top-lists">
+                <!-- 点击事件获取歌单和评论，初始第一页 -->
                 <li *ngFor="let musicTopList of musicTopLists; " (click)="musicTop(musicTopList.getid);
-                topCommend(musicTopList.id, 1);
-                id=musicTopList.id" [class.music-top-li]="id==musicTopList.id">
+                id=musicTopList.getid" [class.music-top-li]="id==musicTopList.getid">
                     <img src="{{musicTopList.ImgUrl}}" alt="">
                     <div>
                         <p>{{musicTopList.name}}</p>
@@ -16,12 +17,30 @@
                             <b>{{musicTopList.time}}</b>
                         </p>
                     </div>
-
+                </li>
+            </ul>
+        </div>
+        <div class="global-top-nav">
+            <p>
+                <b>全球媒体榜</b>
+            </p>
+            <ul class="music-top-lists">
+                <li *ngFor="let globalTopList of globalTopLists; " (click)="musicTop(globalTopList.getid);
+                    id=globalTopList.getid" [class.music-top-li]="id==globalTopList.getid">
+                    <img src="{{globalTopList.ImgUrl}}" alt="">
+                    <div>
+                        <p>{{globalTopList.name}}</p>
+                        <p>
+                            <b>{{globalTopList.time}}</b>
+                        </p>
+                    </div>
                 </li>
             </ul>
         </div>
     </div>
+    <!-- 右边内容部分 -->
     <div class="toplist-right">
+        <!-- 榜单标题部分 -->
         <div class="content-title">
             <img src="{{musicTops?.coverImgUrl}}" alt="">
             <div class="content-title-text">
@@ -68,6 +87,7 @@
                 </ul>
             </div>
         </div>
+        <!-- 歌曲列表 -->
         <div class="content-list">
             <div class="content-list-title">
                 <p>播放：
@@ -101,6 +121,8 @@
             </div>
 
         </div>
+
+        <!-- 评论，此部分分为标题，精彩评论，最新评论 -->
         <div class="commend">
             <div class="commend-title">
                 <p>
@@ -108,18 +130,28 @@
                     <span class="commend-title-text2">共{{topCommends?.total}}条评论</span>
                 </p>
             </div>
+            <!-- 评论输入框 -->
             <div class="my-commend clearfix">
                 <img height="50" width="50" src="http://s4.music.126.net/style/web2/img/default/default_avatar.jpg?param=50y50" alt="">
                 <div>
                     <textarea placeholder="评论"></textarea>
                     <div>
-                        <p>评论</p>
-                        <p>评论</p>
+                        <p>
+                            <a href="">
+                                <i class="fa fa-smile-o"></i>
+                            </a>
+                            <a href="">
+                                <i>@</i>
+                            </a>
+                        </p>
+                        <p><span>140</span><a href="">评论</a></p>
                     </div>
                 </div>
             </div>
             <div class="commend-content">
-                <div class="commend-list" *ngIf="topCommends?.hotComments">
+                <!-- 精彩评论可能存在可能不存在，所以用个判断，其class样式个最新评论一致，结构也一致，修改时要注意对应修改 -->
+                <!-- 先判断是否存在，存在判断是否大于0 -->
+                <div class="commend-list" *ngIf="(topCommends?.hotComments) ? (topCommends?.hotComments.length > 0) : flase">
                     <p class="commend-list-title">
                         <b>精彩评论</b>
                     </p>
@@ -127,9 +159,13 @@
                         <li class="clearfix" *ngFor="let hotComment of topCommends?.hotComments">
                             <img height="50" width="50" src="{{hotComment.user.avatarUrl}}" alt="">
                             <div class="commend-list-text">
-                                <p>
+                                <p class="commend-list-text-p">
                                     <a href="">{{hotComment.user.nickname}}</a>
                                     <span>:{{hotComment.content}}</span>
+                                </p>
+                                <p class="commend-list-text-p" *ngIf="hotComment?.beReplied[0]?.content">
+                                    <a href="">{{hotComment?.beReplied[0]?.user.nickname}}</a>
+                                    <span>:{{hotComment?.beReplied[0]?.content}}</span>
                                 </p>
                                 <div>
                                     <p>
@@ -145,6 +181,7 @@
                         </li>
                     </ul>
                 </div>
+                <!-- 最新评论部分，其class样式何精彩评论一致，结构也一致，修改时要注意对应修改  -->
                 <div class="commend-list">
                     <p class="commend-list-title">
                         <b>最新评论</b>
@@ -176,6 +213,7 @@
                     </ul>
                 </div>
             </div>
+            <!-- 分页导航，采用ngx插件 -->
             <div class="commend-nav">
                 <div class="row">
                     <div class="col-xs-12 col-12">

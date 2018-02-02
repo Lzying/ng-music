@@ -61,9 +61,11 @@
     margin-right: auto;
     width: 982px;
     border: 1px solid rgb(221, 221, 221);
+    border-bottom: none;
     .recommend-module-left {
         float: left;
         width: 729px;
+        padding-bottom: 50px;
         background-color: white;
         border-left: 1px solid rgb(221, 221, 221);
         border-top: none;
@@ -155,19 +157,26 @@
         margin: 21px 21px 0px 21px;
         height: 200px;
         width: 140px;
-        a {
+        .showHot-list-img {
             position: relative;
             display: block;
             height: 140px;
             width: 140px;
             float: left;
-            img {
+            a {
+                display: block;
+                position: absolute;
+                top: 0px;
+                left: 0px;
                 height: 140px;
                 width: 140px;
+                z-index: 10px;
                 border: rgb(202, 200, 200) 1px solid;
+                background: url(../../../assets/imgs/download/coverall.png) no-repeat 0px 0px !important;
             }
-            div {
+            >div {
                 position: absolute;
+                z-index: 10px;
                 bottom: 0px;
                 height: 30px;
                 width: 100%;
@@ -177,24 +186,35 @@
                 border-top: 1.5px solid black;
                 opacity: 0.6;
                 .showHot-list-p1 {
-                    display: inline-block;
+                    float: left;
                     margin: 0px;
-                    width: 50px;
+                    width: 90px;
                     height: 30px;
                     line-height: 30px;
-                    color: #888888;
+                    color: #cecece;
                     font-size: 16px;
                     text-align: left;
+                    i {
+                        opacity: 1 !important;
+                        margin-right:5px; 
+                    }
+                    span {
+                        font-size: 12px;
+                        opacity: 1 !important;
+                    }
                 }
                 .showHot-list-p2 {
-                    display: inline-block;
+                    float: right;
                     margin: 0px;
-                    width: 60px;
+                    width: 30px;
                     height: 30px;
                     line-height: 30px;
-                    color: #616060;
+                    color:  #cecece;
                     font-size: 20px;
                     text-align: right;
+                    i {
+                        opacity: 1 !important;
+                    }
                 }
                 .showHot-list-p2 i:hover {
                     color: white;
@@ -252,7 +272,7 @@
                 display: block;
                 width: 120px;
                 height: 100px; // background: #dbdada;
-                background: url(../../../assets/imgs/download/coverall.png) no-repeat 0px -570px !important;
+                // background: url(../../../assets/imgs/download/coverall.png) no-repeat -30px -30px !important;
                 img {
                     height: 100px;
                     width: 100px;
@@ -284,17 +304,32 @@
             width: 230px;
             height: 120px;
             padding: 20px;
-            a {
+            .showTop-title-img {
                 display: block;
                 float: left;
                 width: 80px;
                 height: 80px;
-                img {
+                a {
+                    display: block;
+                    position: relative;
                     width: 80px;
                     height: 80px;
+                    img {
+                        width: 80px;
+                        height: 80px;
+                    }
+                    a {
+                        display: block;
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        width: 80px;
+                        height: 80px;
+                        background: url(../../../assets/imgs/download/coverall.png) no-repeat 0px 0px !important;
+                    }
                 }
             }
-            >div {
+            div:nth-child(2) {
                 float: left;
                 width: 100px;
                 margin-left: 10px;

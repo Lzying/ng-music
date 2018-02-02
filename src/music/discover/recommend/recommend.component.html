@@ -24,16 +24,16 @@
                     </a>
                 </slide>
                 <slide>
-                        <a href="">
-                            <img src="http://p1.music.126.net/78klyfpq-ehARBXZyoK-Dg==/109951163122788649.jpg" style="display: block; width: 100%;">
-                        </a>
-                    </slide>
-                    <slide>
-                            <a href="">
-                                <img src="http://p1.music.126.net/ZfwaNLPQc8kyc790iQAHYA==/109951163122788565.jpg" style="display: block; width: 100%;">
-                            </a>
-                        </slide>
-                
+                    <a href="">
+                        <img src="http://p1.music.126.net/78klyfpq-ehARBXZyoK-Dg==/109951163122788649.jpg" style="display: block; width: 100%;">
+                    </a>
+                </slide>
+                <slide>
+                    <a href="">
+                        <img src="http://p1.music.126.net/ZfwaNLPQc8kyc790iQAHYA==/109951163122788565.jpg" style="display: block; width: 100%;">
+                    </a>
+                </slide>
+
             </carousel>
         </div>
         <div class="wrap-download">
@@ -47,7 +47,7 @@
 </div>
 
 <div class="recommend-module clearfix">
-    <div class="recommend-module-left">
+    <div class="recommend-module-left clearfix">
         <div class="module-content">
             <div class="module-content-title">
                 <i class="fa fa-circle-o mo-content-title-i"></i>
@@ -82,17 +82,18 @@
             <div class="module-content-showHot">
                 <ul>
                     <li class="showHot-list" *ngFor="let personalized of personalizeds">
-                        <a href="#" title="{{personalized?.name}}">
-                            <img src="{{personalized?.picUrl}}" alt="{{personalized?.name}}">
+                        <div class="showHot-list-img">
+                            <img height="140" width="140" src="{{personalized?.picUrl}}" alt="{{personalized?.name}}">
+                            <a href="#" title="{{personalized?.name}}"></a>
                             <div>
                                 <p class="showHot-list-p1">
-                                    <i class="fa fa-headphones"></i>
+                                    <i class="fa fa-headphones"></i><span>{{personalized.playCount}}</span>
                                 </p>
                                 <p class="showHot-list-p2">
                                     <i class="fa fa-play-circle-o"></i>
                                 </p>
                             </div>
-                        </a>
+                        </div>
                         <p>
                             <a href=""> {{personalized?.name}}</a>
                         </p>
@@ -161,7 +162,7 @@
                 <i class="fa fa-circle-o mo-content-title-i"></i>
                 <a class="mo-content-title-a" href="#">榜单</a>
                 <p class="mo-content-title-p">
-                    <a href="">更多</a>
+                    <a routerLink="/music/discover/toplist">更多</a>
                     <i class="fa fa-arrow-right"></i>
                 </p>
             </div>
@@ -170,9 +171,13 @@
                     <ul>
                         <li>
                             <div class="showTop-title">
-                                <a href="#">
-                                    <img src="http://p4.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg?param=100y100" alt="">
-                                </a>
+                                <div class="showTop-title-img">
+                                    <a href="#">
+                                        <img src="http://p4.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg?param=100y100" alt="">
+                                        <a href=""></a>
+                                    </a>
+                                </div>
+
                                 <div>
                                     <p class="showTop-title-title">音乐云飙升榜</p>
                                     <p class="showTop-title-p">
@@ -192,7 +197,7 @@
                             </div>
                         </li>
                         <li class="showTop-last">
-                            <a href="">查看全部></a>
+                            <a routerLink="/music/discover/toplist">查看全部></a>
                         </li>
                     </ul>
                 </div>
@@ -200,9 +205,12 @@
                     <ul>
                         <li>
                             <div class="showTop-title">
-                                <a href="#">
-                                    <img src="http://p3.music.126.net/N2HO5xfYEqyQ8q6oxCw8IQ==/18713687906568048.jpg?param=100y100" alt="">
-                                </a>
+                                <div class="showTop-title-img">
+                                    <a href="#">
+                                        <img src="http://p3.music.126.net/N2HO5xfYEqyQ8q6oxCw8IQ==/18713687906568048.jpg?param=100y100" alt="">
+                                        <a href=""></a>
+                                    </a>
+                                </div>
                                 <div>
                                     <p class="showTop-title-title">音乐云新歌榜</p>
                                     <p class="showTop-title-p">
@@ -222,7 +230,7 @@
                             </div>
                         </li>
                         <li class="showTop-last">
-                            <a href="">查看全部></a>
+                            <a routerLink="/music/discover/toplist">查看全部></a>
                         </li>
                     </ul>
                 </div>
@@ -230,9 +238,12 @@
                     <ul>
                         <li>
                             <div class="showTop-title">
-                                <a href="#">
-                                    <img src="http://p3.music.126.net/sBzD11nforcuh1jdLSgX7g==/18740076185638788.jpg?param=100y100" alt="">
-                                </a>
+                                <div class="showTop-title-img">
+                                    <a href="#">
+                                        <img src="http://p3.music.126.net/sBzD11nforcuh1jdLSgX7g==/18740076185638788.jpg?param=100y100" alt="">
+                                        <a href=""></a>
+                                    </a>
+                                </div>
                                 <div>
                                     <p class="showTop-title-title">网易原创歌曲榜</p>
                                     <p class="showTop-title-p">
@@ -252,7 +263,7 @@
                             </div>
                         </li>
                         <li class="showTop-last">
-                            <a href="">查看全部></a>
+                            <a routerLink="/music/discover/toplist">查看全部></a>
                         </li>
                     </ul>
                 </div>
