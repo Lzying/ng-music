@@ -2,20 +2,51 @@
     width: 982px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0px;
     background: white;
     border-left: 1px #666 solid;
     border-right: 1px #666 solid;
-    .artist-nav {
-        width: 180px;
-        float: left;
-        background: white;
-    }
     .artist-model {
-        width: 799px;
+        margin: 0px;
+        width: 800px;
         padding: 40px;
         float: right;
         border-left: 1px #666 solid;
         background: white;
+    }
+}
+
+.artist-nav {
+    margin: 0px;
+    width: 180px;
+    float: left;
+    background: white;
+    padding-top: 40px;
+    .artist-nav-title {
+        width: 180px;
+        padding-left: 10px;
+        padding-right: 10px;
+        p {
+            font-size: 20px;
+            width: 160px;
+        }
+        .artist-nav-list {
+            width: 160px;
+            ul {
+                width: 160px;
+                li {
+                    height: 30px;
+                    line-height: 30px;
+                    >span{
+                        font-size: 44px;
+                    }
+                    a {
+                        color: #666;
+                    }
+                }
+                
+            }
+        }
     }
 }
 
@@ -53,6 +84,7 @@
             position: relative;
             height: 130px;
             width: 130px;
+            margin-bottom: 10px;
             a {
                 position: absolute;
                 display: block;
@@ -64,6 +96,21 @@
             }
             a:hover {
                 cursor: pointer;
+            }
+        }
+        >p {
+            a:nth-child(1) {
+                display: block;
+                float: right;
+                font-size: 14px;
+                color: rgb(204, 12, 12);
+            }
+            a:nth-child(1):hover {
+                cursor: pointer;
+                text-decoration: none;
+            }
+            a:nth-child(2) {
+                color: #666;
             }
         }
     }
@@ -82,6 +129,17 @@
             margin-right: 17px;
             margin-top: 20px;
             text-align: left;
+            a:nth-child(2) {
+                font-size: 14px;
+                color: rgb(204, 12, 12);
+            }
+            a:nth-child(2):hover {
+                cursor: pointer;
+                text-decoration: none;
+            }
+            a:nth-child(1) {
+                color: #666;
+            }
         }
         li:nth-child(5n+5) {
             margin-right: 0px;

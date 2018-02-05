@@ -1,1 +1,72 @@
 <!-- 新碟上架 -->
+<div class="album-model">
+    <div class="album-new">
+        <div class="album-title">
+            <p>热门新碟</p>
+        </div>
+        <div class="album-connet">
+            <ul>
+                <li *ngFor="let hotAlbum of hotAlbums">
+                    <div class="album-connet-img">
+                        <img height="130" width="130" src="{{hotAlbum?.picUrl}}" alt="">
+                        <a href=""></a>
+                    </div>
+                    <p><a href="">{{hotAlbum?.name}}</a></p>
+                    <p><a href="">{{hotAlbum?.artist.name}}</a></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="album-all">
+        <div class="album-title">
+            <p>全部新碟</p>
+            <ul>
+                <li>
+                    <a href="">全部</a>
+                </li>
+
+                <span>|</span>
+                <li>
+                    <a href="">华语</a>
+                </li>
+                <span>|</span>
+                <li>
+                    <a href="">欧美</a>
+                </li>
+                <span>|</span>
+                <li>
+                    <a href="">韩国</a>
+                </li>
+                <span>|</span>
+                <li>
+                    <a href="">日本</a>
+                </li>
+            </ul>
+        </div>
+        <div class="album-connet">
+            <ul>
+                <li *ngFor="let album of albums">
+                    <div class="album-connet-img">
+                        <img height="130" width="130" src="{{album?.picUrl}}" alt="">
+                        <a href=""></a>
+                    </div>
+                    <p><a href="">{{album?.name}}</a> </p>
+                    <p><a href="">{{album?.artist.name}}</a></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 分页导航，采用ngx插件 -->
+    <div class="commend-nav">
+        <div class="row">
+            <div class="col-xs-12 col-12">
+                <pagination [totalItems]="totalItems" [itemsPerPage]="itemsPerPage" [maxSize]="maxSize" [boundaryLinks]="true" [(ngModel)]="currentPage"
+                    (pageChanged)="pageChanged($event)" class="pagination-sm" previousText="上页" nextText="下页" firstText="首页"
+                    lastText="尾页"></pagination>
+            </div>
+        </div>
+        <p>共{{pages}}页</p>
+    </div>
+
+</div>

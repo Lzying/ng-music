@@ -5,21 +5,17 @@ import 'rxjs/add/operator/map';
 import * as $ from 'jquery';
 
 @Injectable()
-export class ArtistService {
+export class AlbumService {
     constructor(
         private http: Http,
         private httpClient: HttpClient,
     ) { }
 
     //歌单 api中的歌单 ( 网友精选碟 )，sonSheet可选为hot 和 new
-    artist() {
-        return this.httpClient.get(`http://localhost:3000/top/artists?offset=0&limit=100`)
+    album(page:number) {
+        return this.httpClient.get(`http://localhost:3000/top/album?offset=${(page-1)*35}&limit=35`)
           
     }
 
-    songSheet() {
-        return this.httpClient.get(`http://localhost:3000/artists?id=6452`)
-
-    }
 
 }

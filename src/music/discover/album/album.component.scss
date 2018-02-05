@@ -1,0 +1,85 @@
+.album-model {
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 39px;
+    border-left: 1px #666 solid;
+    border-right: 1px #666 solid;
+    background: white;
+}
+
+.album-new,
+.album-all {
+    width: 900px;
+    .album-title {
+        width: 900px;
+        height: 40px;
+        line-height: 40px;
+        margin-bottom: 20px;
+        border-bottom: 2px rgb(148, 5, 5) solid;
+        >p {
+            display: inline-block;
+            margin-right: 20px;
+            font-size: 22px;
+            color: black;
+        }
+        ul {
+            display: inline-block;
+            li {
+                width: 50px;
+                display: inline-block;
+                text-align: center;
+                color: #666;
+                a {
+                    color: #666;
+                }
+            }
+        }
+    }
+}
+
+.album-connet {
+    width: 900px;
+    li {
+        display: inline-block;
+        width: 153px;
+        height: 160px;
+        margin-right: 33px;
+        margin-bottom: 40px;
+        .album-connet-img {
+            width: 153px;
+            height: 130px;
+            position: relative;
+            background: url(../../../assets/imgs/download/coverall.png) no-repeat 0px -845px !important;
+            a {
+                height: 130px;
+                width: 130px;
+                display: block;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                background: url(../../../assets/imgs/download/coverall.png) no-repeat -10px 0px !important;
+            }
+        }
+        p {
+            width: 130px;
+            white-space: nowrap; // 防止输入字符过长影响布局，阻止换行
+            overflow: hidden; // 防止输入字符过长影响布局，隐藏内容
+            text-overflow: ellipsis; // 防止输入字符过长影响布局，溢出部分替换为...
+            a {
+                color: black;
+            }
+        }
+    }
+    li:nth-child(5n+5) {
+        margin-right: 0px;
+    }
+}
+
+.commend-nav {
+    margin-left: 200px;
+    p {
+        width: 320px;
+        text-align: center;
+    }
+}

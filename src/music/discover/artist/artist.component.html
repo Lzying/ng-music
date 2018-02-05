@@ -1,6 +1,68 @@
 <!-- 歌手 -->
 <div class="artist clearfix">
-    <div class="artist-nva"></div>
+    <div class="artist-nav">
+        <div class="artist-nav-title">
+            <p>推荐歌手</p>
+            <div class="artist-nav-list">
+                <ul>
+                    <li>
+                        <span>.</span>
+                        <a href="">
+
+                            <span> 推荐</span>
+                        </a>
+                    </li>
+                    <li>
+                        <span>.</span>
+                        <a href="">
+                            <span> 入驻歌手</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="artist-nav-title">
+            <p>推荐歌手</p>
+            <div class="artist-nav-list">
+                <ul>
+                    <li>
+                        <span>.</span>
+                        <a href="">
+                            <span> 推荐</span>
+                        </a>
+                    </li>
+                    <li>
+                        <span>.</span>
+                        <a href="">
+                            <span> 入驻歌手</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="artist-nav-title">
+            <p>推荐歌手</p>
+            <div class="artist-nav-list">
+                <ul>
+                    <li>
+                        <span>.</span>
+                        <a href="">
+                            <span> 推荐</span>
+                        </a>
+                    </li>
+                    <li>
+                        <span>.</span>
+                        <a href="">
+                            <span> 入驻歌手</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
     <div class="artist-model">
         <div class="artist-model-top">
             <div class="artist-model-title clearfix">
@@ -16,6 +78,9 @@
                         <a href=""></a>
                     </div>
                     <p>
+                        <a href="" title="{{artist?.name}}的个人主页">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        </a>
                         <a href="">{{artist?.name}}</a>
                     </p>
                 </li>
@@ -36,6 +101,9 @@
                         <a href=""></a>
                     </div>
                     <p>
+                        <a href="" title="{{artist?.name}}的个人主页">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        </a>
                         <a href="">{{artist?.name}}</a>
                     </p>
                 </li>
@@ -44,8 +112,12 @@
         <div class="artist-model-list">
             <ul>
                 <li *ngFor="let artistList of artistLists">
-                    <a href="">
+
+                    <a href="" title="{{artistList?.name}}的个人主页">
                         <span>{{artistList?.name}}</span>
+                    </a>
+                    <a href="">
+                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
                     </a>
                 </li>
             </ul>

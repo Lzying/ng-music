@@ -10,6 +10,7 @@ export const DiscoverRoute = [
             { path: 'toplist', loadChildren: 'music/discover/toplist/toplist.module#TopListModule' },
             { path: 'playlist', loadChildren: 'music/discover/playlist/playlist.module#PlayListModule' },
             { path: 'artist', loadChildren: 'music/discover/artist/artist.module#ArtistModule' },
+            { path: 'album', loadChildren: 'music/discover/album/album.module#AlbumModule' },
             { path: '**', redirectTo: 'recommend' }
         ]
 
