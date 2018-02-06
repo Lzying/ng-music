@@ -20,7 +20,7 @@ import { MusicComponent } from './music.component';
   imports: [
     CommonModule,
     DiscoverModule,
-    RouterModule.forRoot(MusicRoute),
+    RouterModule.forChild(MusicRoute),
 
   ],
   providers: [],

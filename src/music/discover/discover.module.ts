@@ -7,6 +7,7 @@ import { TopListModule } from './toplist/toplist.module';
 import { PlayListModule } from './playlist/playlist.module';
 import { ArtistModule } from './artist/artist.module';
 import { AlbumModule } from './album/album.module';
+import { Album_Module } from './album_/album_.module';//具体内容，测试写法
 
 import { DiscoverComponent } from './discover.component';
 
@@ -21,6 +22,7 @@ import { DiscoverComponent } from './discover.component';
     PlayListModule,
     ArtistModule,
     AlbumModule,
+    Album_Module,
     RouterModule.forChild(DiscoverRoute)
   ],
   providers: [],

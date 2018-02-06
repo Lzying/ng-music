@@ -17,5 +17,8 @@ export class AlbumService {
           
     }
 
+    thisAlbum(id:any){
+        return this.httpClient.get(`http://localhost:3000/album?id=${id}`)
+    }
 
 }

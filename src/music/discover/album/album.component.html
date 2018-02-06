@@ -9,10 +9,14 @@
                 <li *ngFor="let hotAlbum of hotAlbums">
                     <div class="album-connet-img">
                         <img height="130" width="130" src="{{hotAlbum?.picUrl}}" alt="">
-                        <a href=""></a>
+                        <a routerLink="/music/discover/albums" [queryParams]="{id:hotAlbum.id}"></a>
                     </div>
-                    <p><a href="">{{hotAlbum?.name}}</a></p>
-                    <p><a href="">{{hotAlbum?.artist.name}}</a></p>
+                    <p>
+                        <a href="">{{hotAlbum?.name}}</a>
+                    </p>
+                    <p>
+                        <a href="">{{hotAlbum?.artist.name}}</a>
+                    </p>
                 </li>
             </ul>
         </div>
@@ -48,10 +52,14 @@
                 <li *ngFor="let album of albums">
                     <div class="album-connet-img">
                         <img height="130" width="130" src="{{album?.picUrl}}" alt="">
-                        <a href=""></a>
+                        <a routerLink="/music/discover/albums" [queryParams]="{id:album.id}"></a>
                     </div>
-                    <p><a href="">{{album?.name}}</a> </p>
-                    <p><a href="">{{album?.artist.name}}</a></p>
+                    <p>
+                        <a href="">{{album?.name}}</a>
+                    </p>
+                    <p>
+                        <a href="">{{album?.artist.name}}</a>
+                    </p>
                 </li>
             </ul>
         </div>
@@ -70,4 +78,3 @@
     </div>
 
 </div>
-

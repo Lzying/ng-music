@@ -80,7 +80,9 @@ export class TopListComponent implements OnInit {
                         item.time = moment(item.time).format('LL');
                     }
                     // item.time = moment(item.time).fromNow();距离现在多长
-                })
+                });
+
+                console.log(this.topCommends);
             });
     }
 

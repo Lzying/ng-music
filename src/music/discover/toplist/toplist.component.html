@@ -8,7 +8,7 @@
             </p>
             <ul class="music-top-lists">
                 <!-- 点击事件获取歌单和评论，初始第一页 -->
-                <li  *ngFor="let musicTopList of musicTopLists; " (click)="musicTop(musicTopList.getid);
+                <li  routerLink="/music/discover/toplist"  [queryParams]="{getid:musicTopList.getid}" *ngFor="let musicTopList of musicTopLists; " (click)="musicTop(musicTopList.getid);
                 id=musicTopList.getid" [class.music-top-li]="id==musicTopList.getid" >
                     <img src="{{musicTopList.ImgUrl}}" alt="">
                     <div>
@@ -25,7 +25,7 @@
                 <b>全球媒体榜</b>
             </p>
             <ul class="music-top-lists">
-                <li *ngFor="let globalTopList of globalTopLists; " (click)="musicTop(globalTopList.getid);
+                <li routerLink="/music/discover/toplist"  [queryParams]="{getid:globalTopList.getid}" *ngFor="let globalTopList of globalTopLists; " (click)="musicTop(globalTopList.getid);
                     id=globalTopList.getid" [class.music-top-li]="id==globalTopList.getid">
                     <img src="{{globalTopList.ImgUrl}}" alt="">
                     <div>

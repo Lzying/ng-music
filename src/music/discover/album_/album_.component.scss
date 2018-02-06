@@ -1,0 +1,121 @@
+// 数据错误显示
+.erro {
+    width: 980px;
+    height: 780px;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 1px solid rgb(187, 186, 186);
+    border-right: 1px solid rgb(184, 180, 180);
+    background: white;
+    p {
+        width: 978px;
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+.thisAlbum {
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 1px solid rgb(184, 180, 180);
+    border-right: 1px solid rgb(184, 180, 180);
+    background: white;
+    .album {
+        width: 707px;
+        height: 2000px;
+        padding: 50px 26px 50px 40px;
+        float: left;
+        border-right: 1px solid rgb(184, 180, 180);
+        .album-title {
+            width: 640px;
+            height: 500px;
+        }
+    }
+    .otherAlbum {
+        width: 270px;
+        height: 2000px;
+        float: right;
+    }
+}
+
+.album-title-img {
+    position: relative;
+    width: 209px;
+    height: 177px;
+    float: left;
+    background: url(../../../assets/imgs/download/coverall.png) no-repeat 0px -990px !important;
+    a {
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 177px;
+        width: 177px;
+        background: url(../../../assets/imgs/download/coverall.png) no-repeat -30px -148px !important;
+    }
+}
+
+.album-title-name {
+    float: right;
+    width: 410px;
+    height: 177px;
+    >div {
+        height: 24px;
+        width: 410px;
+        line-height: 24px;
+        margin-bottom: 15px;
+        p:nth-child(1) {
+            display: inline-block;
+            height: 24px;
+            width: 54px;
+            margin-right: 5px;
+            background: url(../../../assets/imgs/download/icon.png) no-repeat 0px -185px !important;
+        }
+        p:nth-child(2) {
+            display: inline-block;
+            font-size: 21px;
+            height: 24px;
+            width: 330px;
+            line-height: 24px;
+            white-space: nowrap; // 防止输入字符过长影响布局，阻止换行
+            overflow: hidden; // 防止输入字符过长影响布局，隐藏内容
+            text-overflow: ellipsis; // 防止输入字符过长影响布局，溢出部分替换为...
+        }
+    }
+    >p {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+.album-title-p {
+    width: 640px;
+    margin-top: 20px;
+    h2 {
+        width: 640px;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    >div {
+        width: 640px;
+        height: 150px;
+        overflow: hidden; // 防止输入字符过长影响布局，隐藏内容
+        p {
+            font-size: 12px;
+            width: 640px;
+            line-height: 25px;
+            text-indent: 30px;
+            color: #666;
+        }
+    }
+    .openClose {
+        height: auto;
+    }
+    a {
+        float: right;
+    }
+    a:hover {
+        cursor: pointer;
+    }
+}
