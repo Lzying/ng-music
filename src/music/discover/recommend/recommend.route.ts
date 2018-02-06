@@ -2,7 +2,7 @@ import { RecommendComponent } from './recommend.component';
 
 export const RecommendRoute = [
     {
-        path: 'recommend',
+        path: '',
         component: RecommendComponent
 
     }

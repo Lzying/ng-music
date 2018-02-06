@@ -8,8 +8,8 @@
             </p>
             <ul class="music-top-lists">
                 <!-- 点击事件获取歌单和评论，初始第一页 -->
-                <li *ngFor="let musicTopList of musicTopLists; " (click)="musicTop(musicTopList.getid);
-                id=musicTopList.getid" [class.music-top-li]="id==musicTopList.getid">
+                <li  *ngFor="let musicTopList of musicTopLists; " (click)="musicTop(musicTopList.getid);
+                id=musicTopList.getid" [class.music-top-li]="id==musicTopList.getid" >
                     <img src="{{musicTopList.ImgUrl}}" alt="">
                     <div>
                         <p>{{musicTopList.name}}</p>
