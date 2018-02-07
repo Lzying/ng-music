@@ -112,7 +112,7 @@
                     <tbody>
                         <tr *ngFor="let track of musicTops?.tracks ; let indexs=index">
                             <td>{{indexs+1}}</td>
-                            <td>{{track.name}}</td>
+                            <td><a href="" routerLink="/music/discover/song"  [queryParams]="{id:track.id}">{{track.name}}</a></td>
                             <td>05.03</td>
                             <td>{{track.ar[0].name}}</td>
                         </tr>

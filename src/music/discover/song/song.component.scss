@@ -14,157 +14,116 @@
     }
 }
 
-.thisAlbum {
+.thisSong {
     width: 980px;
     margin-left: auto;
     margin-right: auto;
     border-left: 1px solid rgb(184, 180, 180);
     border-right: 1px solid rgb(184, 180, 180);
     background: white;
-    .album {
+    .song {
         width: 707px;
+        height: 2000px;
         padding: 50px 26px 50px 40px;
         float: left;
         border-right: 1px solid rgb(184, 180, 180);
-        .album-title {
+        .song-title {
             width: 640px;
         }
     }
-    .otherAlbum {
+    .otherSong {
         width: 270px;
         float: right;
     }
 }
 
-.album-title-img {
-    position: relative;
-    width: 209px;
-    height: 177px;
-    float: left;
-    background: url(../../../assets/imgs/download/coverall.png) no-repeat 0px -990px !important;
-    a {
-        display: block;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        height: 177px;
-        width: 177px;
-        background: url(../../../assets/imgs/download/coverall.png) no-repeat -30px -148px !important;
+.song-title{
+    .song-title-img{
+        position: relative;
+        height: 206px;
+        width: 206px;
+        float: left;
+        border-radius:103px;
+        background: url(../../../assets/imgs/download/coverall.png) no-repeat -145px -585px !important; 
+        div{
+            position: absolute;
+            top: 35px;
+            left: 35px;
+            width: 130px;
+            height: 130px;
+            border-radius:65px; 
+            img{
+                border-radius:65px; 
+            }
+        }
+
+    }
+    .song-title-title{
+        float: right;
+        width: 415px;
+        height: 300px;
+        background: rgb(235, 232, 232);
     }
 }
 
-.album-title-name {
-    float: right;
-    width: 410px;
-    height: 177px;
-    >div {
-        height: 24px;
-        width: 410px;
-        line-height: 24px;
-        margin-bottom: 15px;
-        p:nth-child(1) {
-            display: inline-block;
-            height: 24px;
-            width: 54px;
-            margin-right: 5px;
-            background: url(../../../assets/imgs/download/icon.png) no-repeat 0px -185px !important;
-        }
-        p:nth-child(2) {
-            display: inline-block;
-            font-size: 21px;
-            height: 24px;
-            width: 330px;
-            line-height: 24px;
-            white-space: nowrap; // 防止输入字符过长影响布局，阻止换行
-            overflow: hidden; // 防止输入字符过长影响布局，隐藏内容
-            text-overflow: ellipsis; // 防止输入字符过长影响布局，溢出部分替换为...
+.song-title-details{
+    width: 415px;
+    >div{
+        p:nth-child(1){
+            span:nth-child(1){
+                display: inline-block;
+                height: 24px;
+                width: 54px;
+                margin-right: 5px;
+                background: url(../../../assets/imgs/download/icon.png) no-repeat 0px -185px !important;
+            }
+            span:nth-child(2){
+                display: inline-block;
+                font-size: 21px;
+                height: 24px;
+                width: 330px;
+                line-height: 24px;
+                white-space: nowrap; // 防止输入字符过长影响布局，阻止换行
+                overflow: hidden; // 防止输入字符过长影响布局，隐藏内容
+                text-overflow: ellipsis; // 防止输入字符过长影响布局，溢出部分替换为...
+            }
         }
     }
     >p {
         margin-top: 5px;
         margin-bottom: 5px;
     }
+   
 }
 
-.album-title-p {
-    width: 640px;
-    margin-top: 20px;
-    h2 {
-        width: 640px;
-        font-size: 14px;
-        margin-bottom: 10px;
-    }
-    >div {
-        width: 640px;
-        height: 150px;
-        overflow: hidden; // 防止输入字符过长影响布局，隐藏内容
-        p {
-            font-size: 12px;
-            width: 640px;
-            line-height: 25px;
-            text-indent: 30px;
-            color: #666;
-        }
-    }
-    .openClose {
-        height: auto !important;
-    }
-    a {
-        float: right;
-    }
-    a:hover {
-        cursor: pointer;
-    }
+.song-lyric{
+    width: 415px;
+
 }
 
-.album-songs {
-    margin-top: 50px;
-    width: 640px;
-    .album-songs-list-title {
-        width: 640px;
-        height: 40px;
-        line-height: 40px;
-        span:nth-child(1) {
-            font-size: 20px;
-            margin-right: 10px;
-        }
-        span:nth-child(2) {
-            font-size: 12px;
-        }
-    }
-    thead {
-        tr {
-            height: 40px;
-            border-bottom: 1px solid rgb(199, 199, 199);
-            background: rgb(245, 245, 245);
-            td {
-                padding-left: 10px;
-                border-right: 1px solid rgb(199, 199, 199);
-            }
-            td:last-child {
-                border-right: none !important;
-            }
-        }
-    }
-    tbody {
-        tr {
-            height: 30px;
-            td {
-                padding-left: 10px;
-            }
-        }
-        tr:nth-child(odd) {
-            background: #f8f8f8;
-        }
-        tr:nth-child(even) {
-            background: white;
-        }
-    }
-    table {
-        border: rgb(199, 199, 199) 1px solid;
-        border-top: rgb(179, 16, 16) 2px solid;
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // .openClose {
+    //     height: auto !important;
+    // }
+    // a {
+    //     float: right;
+    // }
+    // a:hover {
+    //     cursor: pointer;
+    // }
+
 
 
 

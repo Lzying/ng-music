@@ -1,0 +1,48 @@
+<!-- 新碟上架 -->
+<div class="erro" *ngIf="thisSong?.code==400">
+    <p>请求错误</p>
+</div>
+
+<div class="thisSong clearfix" *ngIf="thisSong?.code==200">
+    <div class="song">
+        <div class="song-title ">
+            <div class="song-title-img">
+                <div>
+                    <img height="130" width="130" src="{{songs?.al?.picUrl}}" alt="">
+                </div>
+
+            </div>
+            <div class="song-title-title clearfix">
+                <div class="song-title-details">
+                    <div>
+                        <p>
+                            <span></span>
+                            <span>{{songs?.name}}</span>
+                        </p>
+                    </div>
+
+                    <p>
+                        <span>歌手：</span>
+                        <span *ngFor="let ar of songs?.ar">{{ar.name}}</span>
+
+                    </p>
+                    <p>
+                        <span>所属专辑：</span>
+                        <span>{{songs?.name}}</span>
+                    </p>
+
+                </div>
+                <div class="song-lyric">
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <div class="otherSong">
+        <p>jjdjdjjd</p>
+    </div>
+</div>
