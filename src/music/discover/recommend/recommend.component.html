@@ -189,7 +189,7 @@
                         </li>
                         <li *ngFor="let topList of topLists;let topindex=index" class="showTop-list">
                             <span [style.color]="(topindex==0 || topindex==1 || topindex==2) ? 'red' : '#666'">{{topindex+1}}</span>
-                            <a href="">{{topList.name}}</a>
+                            <a routerLink="/music/discover/song" [queryParams]="{id:topList.id}">{{topList.name}}</a>
                             <div>
                                 <i class="fa fa-play-circle-o"></i>
                                 <i class="fa fa-plus"></i>
@@ -222,7 +222,7 @@
                         </li>
                         <li *ngFor="let topNew of topNews; let topindex=index" class="showTop-list">
                             <span [style.color]="(topindex==0 || topindex==1 || topindex==2) ? 'red' : '#666'">{{topindex+1}}</span>
-                            <a href="">{{topNew.name}}</a>
+                            <a routerLink="/music/discover/song" [queryParams]="{id:topNew.id}">{{topNew.name}}</a>
                             <div>
                                 <i class="fa fa-play-circle-o"></i>
                                 <i class="fa fa-plus"></i>
@@ -255,7 +255,7 @@
                         </li>
                         <li *ngFor="let topOrigina of topOriginas ;let topindex=index" class="showTop-list">
                             <span [style.color]="(topindex==0 || topindex==1 || topindex==2) ? 'red' : '#666'">{{topindex+1}}</span>
-                            <a href="">{{topOrigina.name}}</a>
+                            <a routerLink="/music/discover/song" [queryParams]="{id:topOrigina.id}">{{topOrigina.name}}</a>
                             <div>
                                 <i class="fa fa-play-circle-o"></i>
                                 <i class="fa fa-plus"></i>

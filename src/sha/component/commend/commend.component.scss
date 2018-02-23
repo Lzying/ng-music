@@ -1,0 +1,136 @@
+.commend {
+    width: 640px;
+    margin-top: 50px;
+    .commend-title {
+        height: 40px;
+        line-height: 40px;
+        border-bottom: solid 2px rgb(182, 17, 17);
+        .commend-title-text1 {
+            margin-right: 20px;
+            font-size: 22px;
+            color: #666;
+        }
+        .commend-title-text2 {
+            font-size: 12px;
+            color: #666;
+        }
+    }
+    .my-commend {
+        width: 640px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        img {
+            float: left;
+        }
+        >div {
+            height: 98px;
+            width: 578px;
+            float: right;
+            textarea {
+                height: 60px;
+                width: 578px;
+                resize: none;
+            }
+            textarea:focus {
+                outline: none
+            }
+            p:nth-child(1) {
+                float: left;
+                a {
+                    font-size: 18px;
+                    color: #666;
+                }
+                a:hover {
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+            }
+            p:nth-child(2) {
+                float: right;
+                a {
+                    display: inline-block;
+                    margin-left: 5px;
+                    width: 50px;
+                    height: 20px;
+                    line-height: 20px;
+                    background: rgb(5, 148, 243);
+                    text-align: center;
+                    color: white;
+                }
+                a:hover {
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.commend-list {
+    width: 640px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    .commend-list-title {
+        width: 640px;
+        font-size: 14px;
+        border-bottom: 1px solid #cfcfcf;
+    }
+    .commend-list-ul {
+        width: 640px;
+        li {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-top: 1px dotted #ccc;
+            img {
+                float: left;
+            }
+            .commend-list-text {
+                width: 578px;
+                float: right;
+                .commend-list-text-p {
+                    width: 578px;
+                    margin-bottom: 10px;
+                    padding-right: 10px;
+                }
+                >p:nth-child(2) {
+                    background: rgb(243, 243, 243);
+                    border: #ccc 1px solid;
+                    width: 568px;
+                    padding: 10px;
+                    margin-bottom: 15px;
+                    margin-left: 10px;
+                    margin-top: -5px;
+                }
+                >div {
+                    width: 578px;
+                    p {
+                        width: 100px;
+                        float: right;
+                        text-align: right;
+                        a:nth-child(1) {
+                            color: #666;
+                            font-size: 12px;
+                            border-right: 1px solid #666;
+                            padding-right: 5px;
+                            i {
+                                color: rgb(11, 104, 167);
+                                font-size: 15px;
+                            }
+                        }
+                        a:nth-child(2) {
+                            color: #666;
+                            font-size: 12px;
+                            padding-left: 5px;
+                        }
+                    }
+                    >span {
+                        color: #666;
+                    }
+                }
+            }
+        }
+        li:nth-child(1) {
+            border-top: 0px !important;
+        }
+    }
+}

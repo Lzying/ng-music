@@ -5,7 +5,7 @@
 
 <div class="thisSong clearfix" *ngIf="thisSong?.code==200">
     <div class="song">
-        <div class="song-title ">
+        <div class="song-title clearfix">
             <div class="song-title-img">
                 <div>
                     <img height="130" width="130" src="{{songs?.al?.picUrl}}" alt="">
@@ -14,14 +14,13 @@
             </div>
             <div class="song-title-title clearfix">
                 <div class="song-title-details">
-                    <div>
+                    <div class="song-title-details-t">
                         <p>
                             <span></span>
                             <span>{{songs?.name}}</span>
                         </p>
+                        <p>{{songs?.alia[0]}}</p>
                     </div>
-
-                    
                     <p>
                         <span>歌手：</span>
                         <span *ngFor="let ar of songs?.ar">{{ar.name}}</span>
@@ -31,19 +30,40 @@
                         <span>所属专辑：</span>
                         <span>{{songs?.name}}</span>
                     </p>
-
+                    <div class="song-title-bt">按钮预留位置，因为懒所以没做</div>
                 </div>
-                <div class="song-lyric">
-
+                <div class="song-lyric clearfix">
+                    <div [class.openClose]="open">
+                        <p *ngFor="let lrc of lyrics?.lrc">{{lrc}}</p>
+                        <p *ngFor="let tlyric of lyrics?.tlyric">{{tlyric}}</p>
+                    </div>
+                    <a (click)="open=!open">
+                        <span *ngIf="!open">展开</span>
+                        <i *ngIf="!open" class="fa fa-chevron-down"></i>
+                        <span *ngIf="open">收起</span>
+                        <i *ngIf="open" class="fa fa-chevron-up"></i>
+                    </a>
                 </div>
             </div>
 
         </div>
+        <div  class="commend">
+            <!-- 评论 -->
+            <app-commend [MyCommends]="songsCommends"></app-commend>
 
+            <div class="commend-nav">
+                <div class="row">
+                    <div class="col-xs-12 col-12">
+                        <pagination [totalItems]="totalItems" [itemsPerPage]="itemsPerPage" [maxSize]="maxSize" [boundaryLinks]="true" [(ngModel)]="currentPage"
+                            (pageChanged)="pageChanged($event)" class="pagination-sm" previousText="上页" nextText="下页" firstText="首页"
+                            lastText="尾页"></pagination>
+                    </div>
+                </div>
+                <p>共{{pages}}页</p>
+            </div>
+        </div>
 
-
+        <div class="otherSong">
+            <p>jjdjdjjd</p>
+        </div>
     </div>
-    <div class="otherSong">
-        <p>jjdjdjjd</p>
-    </div>
-</div>

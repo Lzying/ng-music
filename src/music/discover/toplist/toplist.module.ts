@@ -4,7 +4,7 @@ import { FormsModule }   from '@angular/forms';
 import { CommonModule } from '@angular/common'; 
 import { TopListRoute } from './toplist.route';
 import { PaginationModule } from 'ngx-bootstrap/pagination'
-
+import { CommendModule } from '../../../sha/component';
 
 import { TopListComponent } from './toplist.component';
 
@@ -18,7 +18,8 @@ import { TopListComponent } from './toplist.component';
     RouterModule.forChild(TopListRoute),
     PaginationModule.forRoot(),
     FormsModule,
-    CommonModule
+    CommonModule,
+    CommendModule
   ],
   providers: [],
   bootstrap: []

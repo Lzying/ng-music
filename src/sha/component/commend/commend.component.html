@@ -1,0 +1,95 @@
+<!-- 评论，此部分分为标题，精彩评论，最新评论 -->
+<div class="commend">
+    <div class="commend-title">
+        <p>
+            <span class="commend-title-text1">评论</span>
+            <span class="commend-title-text2">共{{myCommends?.total}}条评论</span>
+        </p>
+    </div>
+    <!-- 评论输入框 -->
+    <div class="my-commend clearfix">
+        <img height="50" width="50" src="http://s4.music.126.net/style/web2/img/default/default_avatar.jpg?param=50y50" alt="">
+        <div>
+            <textarea placeholder="评论"></textarea>
+            <div>
+                <p>
+                    <a href="">
+                        <i class="fa fa-smile-o"></i>
+                    </a>
+                    <a href="">
+                        <i>@</i>
+                    </a>
+                </p>
+                <p>
+                    <span>140</span>
+                    <a href="">评论</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="commend-content">
+        <!-- 精彩评论可能存在可能不存在，所以用个判断，其class样式个最新评论一致，结构也一致，修改时要注意对应修改 -->
+        <!-- 先判断是否存在，存在判断是否大于0 -->
+        <div class="commend-list" *ngIf="(myCommends?.hotComments) ? (myCommends?.hotComments.length > 0) : flase">
+            <p class="commend-list-title">
+                <b>精彩评论</b>
+            </p>
+            <ul class="commend-list-ul">
+                <li class="clearfix" *ngFor="let hotComment of myCommends?.hotComments">
+                    <img height="50" width="50" src="{{hotComment.user.avatarUrl}}" alt="">
+                    <div class="commend-list-text">
+                        <p class="commend-list-text-p">
+                            <a href="">{{hotComment.user.nickname}}</a>
+                            <span>:{{hotComment.content}}</span>
+                        </p>
+                        <p class="commend-list-text-p" *ngIf="hotComment?.beReplied[0]?.content">
+                            <a href="">{{hotComment?.beReplied[0]?.user.nickname}}</a>
+                            <span>:{{hotComment?.beReplied[0]?.content}}</span>
+                        </p>
+                        <div>
+                            <p>
+                                <a href="">
+                                    <i class="fa fa-thumbs-o-up"></i>
+                                    <span *ngIf="hotComment?.likedCount">({{hotComment?.likedCount}})</span>
+                                </a>
+                                <a href="">回复</a>
+                            </p>
+                            <span>{{hotComment?.time}}</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- 最新评论部分，其class样式何精彩评论一致，结构也一致，修改时要注意对应修改  -->
+        <div class="commend-list">
+            <p class="commend-list-title">
+                <b>最新评论</b>
+            </p>
+            <ul class="commend-list-ul">
+                <li class="clearfix" *ngFor="let comment of myCommends?.comments">
+                    <img height="50" width="50" src="{{comment?.user.avatarUrl}}" alt="">
+                    <div class="commend-list-text">
+                        <p class="commend-list-text-p">
+                            <a href="">{{comment?.user.nickname}}</a>
+                            <span>:{{comment?.content}}</span>
+                        </p>
+                        <p class="commend-list-text-p" *ngIf="comment?.beReplied[0]?.content">
+                            <a href="">{{comment?.beReplied[0].user.nickname}}</a>
+                            <span>:{{comment?.beReplied[0].content}}</span>
+                        </p>
+                        <div>
+                            <p>
+                                <a href="">
+                                    <i class="fa fa-thumbs-o-up"></i>
+                                    <span *ngIf="comment?.likedCount">({{comment?.likedCount}})</span>
+                                </a>
+                                <a href="">回复</a>
+                            </p>
+                            <span>{{comment?.time}}</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
