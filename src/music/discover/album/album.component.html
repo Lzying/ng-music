@@ -12,7 +12,7 @@
                         <a routerLink="/music/discover/albums" [queryParams]="{id:hotAlbum.id}"></a>
                     </div>
                     <p>
-                        <a href="">{{hotAlbum?.name}}</a>
+                        <a routerLink="/music/discover/albums" [queryParams]="{id:hotAlbum.id}">{{hotAlbum?.name}}</a>
                     </p>
                     <p>
                         <a href="">{{hotAlbum?.artist.name}}</a>
@@ -55,7 +55,7 @@
                         <a routerLink="/music/discover/albums" [queryParams]="{id:album.id}"></a>
                     </div>
                     <p>
-                        <a href="">{{album?.name}}</a>
+                        <a routerLink="/music/discover/albums" [queryParams]="{id:album.id}">{{album?.name}}</a>
                     </p>
                     <p>
                         <a href="">{{album?.artist.name}}</a>

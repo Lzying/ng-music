@@ -9,6 +9,7 @@ import { ArtistModule } from './artist/artist.module';
 import { AlbumModule } from './album/album.module';
 import { SongModule } from './song/song.module';//具体内容，测试写法
 import { Album_Module } from './album_/album_.module';//具体内容，测试写法
+import { ArtistInformationModule } from './artist-information/artist-information.module';
 
 import { DiscoverComponent } from './discover.component';
 
@@ -25,6 +26,7 @@ import { DiscoverComponent } from './discover.component';
     AlbumModule,
     Album_Module,
     SongModule,
+    ArtistInformationModule,
     RouterModule.forChild(DiscoverRoute)
   ],
   providers: [],

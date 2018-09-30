@@ -1,0 +1,17 @@
+.model {
+    width: 982px;
+    margin-right: auto;
+    margin-left: auto;
+    border-left: 1px solid rgb(163, 161, 161);
+    border-right: 1px solid rgb(163, 161, 161);
+    .artist-information {
+        float: left;
+        height: 2000px;
+        width: 710px;
+        border-right: 1px solid rgb(163, 161, 161);
+    }
+    .artist-hot {
+        float: right;
+        width: 270px;
+    }
+}

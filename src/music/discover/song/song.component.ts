@@ -36,7 +36,7 @@ export class SongComponent implements OnInit {
         this.SongService.song(id).subscribe(data => {
             this.thisSong = data;
             this.songs = data["songs"][0];
-            // console.log(data);
+            console.log(data);
             // console.log(this.songs);
         })
     }
@@ -59,7 +59,9 @@ export class SongComponent implements OnInit {
     songCommend(id: any, page: number) {
         this.SongService.songCommend(id, page).subscribe(data => {
             this.songsCommends = data;
-            this.songsCommends=this.commendTimeService.commendTime(this.songsCommends,page);//格式化评论时间，需要输入页码
+            this.songsCommends = this.commendTimeService.commendTime(this.songsCommends, page);//格式化评论时间，需要输入页码
+            this.totalItems = data["total"];
+            this.pages = Math.ceil(data["total"] / 20);//初始化页数，用于分页
             console.log(data);
         })
     }
@@ -69,7 +71,7 @@ export class SongComponent implements OnInit {
    */
     songLyric(id: any) {
         this.SongService.songLyric(id).subscribe(data => {
-            this.lyrics=this.lyricService.analysisLyric(data);
+            this.lyrics = this.lyricService.analysisLyric(data);
         })
     }
 

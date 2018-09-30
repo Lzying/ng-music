@@ -13,6 +13,7 @@ export const DiscoverRoute = [
             { path: 'album', loadChildren: 'music/discover/album/album.module#AlbumModule' },
             { path: 'albums', loadChildren: 'music/discover/album_/album_.module#Album_Module' },
             { path: 'song', loadChildren: 'music/discover/song/song.module#SongModule' },
+            { path: 'artistInformation', loadChildren: 'music/discover/artist-information/artist-information.module#ArtistInformationModule' },
             { path: '**', redirectTo: 'recommend' }
         ]
 

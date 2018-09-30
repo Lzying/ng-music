@@ -75,13 +75,13 @@
                 <li *ngFor="let artist of artists">
                     <div class="artist-model-top-img">
                         <img width="130" height="130" src="{{artist?.img1v1Url}}" alt="">
-                        <a href=""></a>
+                        <a routerLink="/music/discover/artistInformation" [queryParams]="{id:artist.id}"></a>
                     </div>
                     <p>
-                        <a href="" title="{{artist?.name}}的个人主页">
+                        <a routerLink="/music/discover/artistInformation" [queryParams]="{id:artist.id}" title="{{artist?.name}}的个人主页">
                             <i class="fa fa-user-circle-o" aria-hidden="true"></i>
                         </a>
-                        <a href="">{{artist?.name}}</a>
+                        <a routerLink="/music/discover/artistInformation" [queryParams]="{id:artist.id}">{{artist?.name}}</a>
                     </p>
                 </li>
             </ul>
@@ -98,13 +98,13 @@
                 <li *ngFor="let artist of artists">
                     <div class="artist-model-top-img">
                         <img width="130" height="130" src="{{artist?.img1v1Url}}" alt="">
-                        <a href=""></a>
+                        <a routerLink="/music/discover/artistInformation" [queryParams]="{id:artist.id}"></a>
                     </div>
                     <p>
-                        <a href="" title="{{artist?.name}}的个人主页">
+                        <a routerLink="/music/discover/artistInformation" [queryParams]="{id:artist.id}" title="{{artist?.name}}的个人主页">
                             <i class="fa fa-user-circle-o" aria-hidden="true"></i>
                         </a>
-                        <a href="">{{artist?.name}}</a>
+                        <a routerLink="/music/discover/artistInformation" [queryParams]="{id:artist.id}">{{artist?.name}}</a>
                     </p>
                 </li>
             </ul>
