@@ -45,6 +45,7 @@ export class TopListComponent implements OnInit {
     musicTop(getid: any) {
         this.topListService.musicTop(getid)
             .subscribe(data => {
+                console.log(data);
                 this.musicTops = data.playlist;
                 this.totalItems = this.musicTops.commentCount; // 初始化评论总数，用于分页
                 this.pages = Math.ceil(this.musicTops.commentCount / 20); // 初始化页数，用于分页

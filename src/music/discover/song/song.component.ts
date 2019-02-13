@@ -17,10 +17,10 @@ export class SongComponent implements OnInit {
     songs: any; // 全部
     songsCommends: any; // 评论
     lyrics: any;
-
-        /**
-     * 分页部分代码
-     */
+    url: any;
+    /**
+ * 分页部分代码
+ */
     currentPage = 1;
     maxSize = 5;
     itemsPerPage = 20;
@@ -56,6 +56,7 @@ export class SongComponent implements OnInit {
         let href = window.location.href;
         let thisId = href.split('id=')[1];
         // console.log(thisId);
+        this.url = `https://music.163.com/song/media/outer/url?id=${thisId}.mp3`;
         this.song(thisId);
         this.songLyric(thisId);
         this.songCommend(thisId, 1);
