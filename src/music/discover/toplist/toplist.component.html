@@ -8,9 +8,8 @@
             </p>
             <ul class="music-top-lists">
                 <!-- 点击事件获取歌单和评论，初始第一页 -->
-                <li routerLink="/music/discover/toplist" [queryParams]="{getid:musicTopList.getid}" *ngFor="let musicTopList of musicTopLists; "
-                    (click)="musicTop(musicTopList.getid);
-                id=musicTopList.getid" [class.music-top-li]="id==musicTopList.getid">
+                <li routerLink="/music/discover/toplist" *ngFor="let musicTopList of musicTopLists"
+                    (click)="musicTop(musicTopList.getid);id=musicTopList.getid" [class.music-top-li]="id==musicTopList.getid">
                     <img src="{{musicTopList.ImgUrl}}" alt="">
                     <div>
                         <p>{{musicTopList.name}}</p>
@@ -26,9 +25,8 @@
                 <b>全球媒体榜</b>
             </p>
             <ul class="music-top-lists">
-                <li routerLink="/music/discover/toplist" [queryParams]="{getid:globalTopList.getid}" *ngFor="let globalTopList of globalTopLists; "
-                    (click)="musicTop(globalTopList.getid);
-                    id=globalTopList.getid" [class.music-top-li]="id==globalTopList.getid">
+                <li routerLink="/music/discover/toplist"*ngFor="let globalTopList of globalTopLists"
+                    (click)="musicTop(globalTopList.getid);id=globalTopList.getid" [class.music-top-li]="id==globalTopList.getid">
                     <img src="{{globalTopList.ImgUrl}}" alt="">
                     <div>
                         <p>{{globalTopList.name}}</p>
@@ -115,7 +113,7 @@
                         <tr *ngFor="let track of musicTops?.tracks ; let indexs=index">
                             <td>{{indexs+1}}</td>
                             <td>
-                                <a href="" routerLink="/music/discover/song" [queryParams]="{id:track.id}">{{track.name}}</a>
+                                <a href="" routerLink="/music/discover/song">{{track.name}}</a>
                             </td>
                             <td>05.03</td>
                             <td>{{track.ar[0].name}}</td>

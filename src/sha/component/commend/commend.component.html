@@ -30,7 +30,7 @@
     <div class="commend-content">
         <!-- 精彩评论可能存在可能不存在，所以用个判断，其class样式个最新评论一致，结构也一致，修改时要注意对应修改 -->
         <!-- 先判断是否存在，存在判断是否大于0 -->
-        <div class="commend-list" *ngIf="(myCommends?.hotComments) ? (myCommends?.hotComments.length > 0) : flase">
+        <div class="commend-list" *ngIf="(myCommends?.hotComments) ? (myCommends?.hotComments.length > 0) : 'flase'">
             <p class="commend-list-title">
                 <b>精彩评论</b>
             </p>

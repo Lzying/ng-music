@@ -4,12 +4,12 @@ import { CommendTimeService } from '../../../assets/service/commendTime.service'
 import * as moment from 'moment';
 
 @Component({
-    selector: 'app_album_',
-    templateUrl: './album_.component.html',
-    styleUrls: ['./album_.component.scss'],
+    selector: 'app-albums',
+    templateUrl: './albums.component.html',
+    styleUrls: ['./albums.component.scss'],
     providers: [AlbumService, CommendTimeService]
 })
-export class Album_Component implements OnInit {
+export class AlbumsComponent implements OnInit {
     open = false;
     openClose: boolean;
     thisAlbums: any; // 全部
@@ -18,6 +18,15 @@ export class Album_Component implements OnInit {
     songs: any; // 歌单
     albumCommends: any; // 评论
 
+        /**
+     * 分页部分代码
+     */
+    // 分页
+    currentPage = 1;
+    maxSize = 5;
+    itemsPerPage = 20;
+    totalItems: any;
+    pages: any;
     constructor(
         private albumService: AlbumService,
         private commendTimeService: CommendTimeService
@@ -34,8 +43,8 @@ export class Album_Component implements OnInit {
     thisAlbum(id: any) {
         this.albumService.thisAlbum(id).subscribe(data => {
             this.thisAlbums = data;
-            this.album = data["album"];
-            this.songs = data["songs"];
+            this.album = data['album'];
+            this.songs = data['songs'];
             this.albumCommend(this.album.id, 1);
             this.album.publishTime = moment(this.album.publishTime).format('YYYY-MM-DD'); // 格式化专辑出版时间
             this.albumTexts = this.text(this.album.description); // 格式化专辑说明
@@ -49,7 +58,7 @@ export class Album_Component implements OnInit {
      */
     getHref() {
         let href = window.location.href;
-        let thisId = href.split("id=")[1];
+        let thisId = href.split('id=')[1];
         console.log(thisId);
         this.thisAlbum(thisId);
     }
@@ -60,11 +69,11 @@ export class Album_Component implements OnInit {
     albumCommend(id: any, page: number) {
         this.albumService.albumCommend(id, page).subscribe(data => {
             this.albumCommends = data;
-            this.totalItems = data["total"];
+            this.totalItems = data['total'];
             this.pages = Math.ceil(this.totalItems / 20);
-            this.albumCommends = this.commendTimeService.commendTime(this.albumCommends, page);//格式化评论时间，需要输入页码
+            this.albumCommends = this.commendTimeService.commendTime(this.albumCommends, page); // 格式化评论时间，需要输入页码
             console.log(data);
-        })
+        });
     }
 
     /**
@@ -77,15 +86,7 @@ export class Album_Component implements OnInit {
     }
 
 
-    /**
-     * 分页部分代码
-     */
-    // 分页
-    currentPage = 1;
-    maxSize = 5;
-    itemsPerPage = 20;
-    totalItems: any;
-    pages: any;
+
     pageChanged(event: any): void {
         this.albumCommend(this.album.id, event.page);
         console.log(event.page);

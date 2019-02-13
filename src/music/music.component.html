@@ -14,7 +14,7 @@
                 <li>下载客户端</li>
             </ul>
 
-            <div class="login" (mousemove)="loginList=true" (mouseleave)="loginList=flase">
+            <div class="login" (mousemove)="mousemove()" (mouseleave)="mouseleave()">
                 <a> 登录</a>
                 <i class="fa fa-caret-down"></i>
 
@@ -71,7 +71,7 @@
 
 <footer>
     <div class="myfooter">
-        <p>模仿网易云音乐（仅用于学习）</p>
+        <p style="color:red;">模仿网易云音乐（仅用于学习）</p>
         <p>
             <a href="https://github.com/Binaryify/NeteaseCloudMusicApi" target="_blank"> 感谢大神提供的api：https://github.com/Binaryify/NeteaseCloudMusicApi</a>
         </p>

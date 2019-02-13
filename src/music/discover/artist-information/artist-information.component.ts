@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-
 @Component({
     selector: 'app-artist-information',
     templateUrl: './artist-information.component.html',
@@ -11,12 +10,8 @@ export class ArtistInformationComponent implements OnInit {
 
     constructor() { }
     ngOnInit() {
-      
+
     }
-
-   
-
-
 }
 
 

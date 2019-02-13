@@ -9,10 +9,10 @@ import { HttpService } from '../../../assets/service/http.service';
 })
 export class RecommendComponent implements OnInit {
 
-    bannerLists: any;// 轮播图数据，比较旧不用,暂时在网易直接找地址来用
-    personalizeds: any;//热门推荐
-    topAlbums0: any;//新碟上架
-    topAlbums1: any;//新碟上架
+    bannerLists: any; // 轮播图数据，比较旧不用,暂时在网易直接找地址来用
+    personalizeds: any; // 热门推荐
+    topAlbums0: any; // 新碟上架
+    topAlbums1: any; // 新碟上架
     topAlbumsOne: any;
     topAlbumsTwo: any;
     topAlbumsThree: any;
@@ -40,12 +40,12 @@ export class RecommendComponent implements OnInit {
         this.httpservice.personalized()
             .subscribe((data) => {
                 this.personalizeds = data.result.slice(0, 8);
-                //格式化播放量，大于等于100000修改为 以万为单位
+                // 格式化播放量，大于等于100000修改为 以万为单位
                 this.personalizeds.forEach(item => {
                     if (item.playCount >= 100000) {
-                        item.playCount = Math.floor(item.playCount / 10000) + "万";
-                    }else{
-                        item.playCount = Math.floor(item.playCount);//由于有些数据是小数，所以取整
+                        item.playCount = Math.floor(item.playCount / 10000) + '万';
+                    } else {
+                        item.playCount = Math.floor(item.playCount); // 由于有些数据是小数，所以取整
                     }
 
                 });

@@ -12,14 +12,14 @@ export class ArtistComponent implements OnInit {
     artistLists: any;
     constructor(private artistService: ArtistService) { }
     ngOnInit() {
-       this.artist();
+        this.artist();
     }
 
-    artist(){
+    artist() {
         this.artistService.artist().subscribe(data => {
-            this.artists = data["artists"].slice(0, 10);
-            this.artistLists = data["artists"].slice(10);
-        })
+            this.artists = data['artists'].slice(0, 10);
+            this.artistLists = data['artists'].slice(10);
+        });
     }
 
 

@@ -5,7 +5,7 @@ import { LyricService } from '../../../assets/service/lyric.service';
 import * as moment from 'moment';
 
 @Component({
-    selector: 'app_song',
+    selector: 'app-song',
     templateUrl: './song.component.html',
     styleUrls: ['./song.component.scss'],
     providers: [SongService, CommendTimeService, LyricService]
@@ -14,12 +14,20 @@ export class SongComponent implements OnInit {
     open = false;
     openClose: boolean;
     thisSong: any;
-    songs: any;//全部
-    songsCommends: any;//评论
+    songs: any; // 全部
+    songsCommends: any; // 评论
     lyrics: any;
 
+        /**
+     * 分页部分代码
+     */
+    currentPage = 1;
+    maxSize = 5;
+    itemsPerPage = 20;
+    totalItems: any;
+    pages: any;
     constructor(
-        private SongService: SongService,
+        private songService: SongService,
         private commendTimeService: CommendTimeService,
         private lyricService: LyricService,
     ) { }
@@ -33,12 +41,12 @@ export class SongComponent implements OnInit {
      * @param id 输入id
      */
     song(id: any) {
-        this.SongService.song(id).subscribe(data => {
+        this.songService.song(id).subscribe(data => {
             this.thisSong = data;
-            this.songs = data["songs"][0];
+            this.songs = data['songs'][0];
             console.log(data);
             // console.log(this.songs);
-        })
+        });
     }
 
     /**
@@ -46,7 +54,7 @@ export class SongComponent implements OnInit {
      */
     getHref() {
         let href = window.location.href;
-        let thisId = href.split("id=")[1];
+        let thisId = href.split('id=')[1];
         // console.log(thisId);
         this.song(thisId);
         this.songLyric(thisId);
@@ -57,22 +65,22 @@ export class SongComponent implements OnInit {
     * 获取评论
     */
     songCommend(id: any, page: number) {
-        this.SongService.songCommend(id, page).subscribe(data => {
+        this.songService.songCommend(id, page).subscribe(data => {
             this.songsCommends = data;
-            this.songsCommends = this.commendTimeService.commendTime(this.songsCommends, page);//格式化评论时间，需要输入页码
-            this.totalItems = data["total"];
-            this.pages = Math.ceil(data["total"] / 20);//初始化页数，用于分页
+            this.songsCommends = this.commendTimeService.commendTime(this.songsCommends, page); // 格式化评论时间，需要输入页码
+            this.totalItems = data['total'];
+            this.pages = Math.ceil(data['total'] / 20); // 初始化页数，用于分页
             console.log(data);
-        })
+        });
     }
 
     /**
    * 获取歌词
    */
     songLyric(id: any) {
-        this.SongService.songLyric(id).subscribe(data => {
+        this.songService.songLyric(id).subscribe(data => {
             this.lyrics = this.lyricService.analysisLyric(data);
-        })
+        });
     }
 
     /**
@@ -80,7 +88,7 @@ export class SongComponent implements OnInit {
      * @param text 输入文本
      */
     text(text: any): any {
-        let thisText = text.split("\n");
+        let thisText = text.split('\n');
         return thisText;
     }
 
@@ -88,17 +96,10 @@ export class SongComponent implements OnInit {
 
 
 
-    /**
-     * 分页部分代码
-     */
-    currentPage = 1;
-    maxSize = 5;
-    itemsPerPage = 20;
-    totalItems: any;
-    pages: any;
+
     pageChanged(event: any): void {
         this.songCommend(this.songs.id, event.page);
-        console.log(event.page)
+        console.log(event.page);
     }
 
 }

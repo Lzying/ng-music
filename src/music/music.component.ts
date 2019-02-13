@@ -14,4 +14,10 @@ export class MusicComponent implements OnInit {
   ngOnInit() {
     this.localTitles = this.localService.localTitle();
   }
+  mousemove() {
+    this.loginList = true;
+  }
+  mouseleave() {
+    this.loginList = false;
+  }
 }

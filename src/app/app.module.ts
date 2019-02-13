@@ -4,7 +4,8 @@ import { appRoute } from './app.route';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
-import { MusicModule } from '../music/music.module'
+import { MusicModule } from '../music/music.module';
+import {HashLocationStrategy , LocationStrategy} from '@angular/common';
 
 
 import { AppComponent } from './app.component';
@@ -20,7 +21,9 @@ import { AppComponent } from './app.component';
     HttpClientModule,
     RouterModule.forRoot(appRoute),
   ],
-  providers: [],
+  providers: [
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
