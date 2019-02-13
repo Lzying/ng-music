@@ -81,7 +81,7 @@
             </div>
             <div class="module-content-showHot">
                 <ul>
-                    <li class="showHot-list" *ngFor="let personalized of personalizeds">
+                    <li class="showHot-list"  *ngFor="let personalized of personalizeds" >
                         <div class="showHot-list-img">
                             <img height="140" width="140" src="{{personalized?.picUrl}}" alt="{{personalized?.name}}">
                             <a href="#" title="{{personalized?.name}}"></a>
@@ -95,7 +95,7 @@
                             </div>
                         </div>
                         <p>
-                            <a href=""> {{personalized?.name}}</a>
+                            <a routerLink="/music/discover/albums" [queryParams]="{id:personalized.id}"> {{personalized?.name}}</a>
                         </p>
                     </li>
                 </ul>
@@ -172,14 +172,14 @@
                         <li>
                             <div class="showTop-title">
                                 <div class="showTop-title-img">
-                                    <a href="#">
+                                    <a routerLink="/music/discover/toplist">
                                         <img src="http://p4.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg?param=100y100" alt="">
                                         <a href=""></a>
                                     </a>
                                 </div>
 
                                 <div>
-                                    <p class="showTop-title-title">音乐云飙升榜</p>
+                                    <p class="showTop-title-title" routerLink="/music/discover/toplist">音乐云飙升榜</p>
                                     <p class="showTop-title-p">
                                         <i class="fa fa-play-circle-o"></i>
                                         <i class="fa fa-plus-square-o"> </i>
@@ -205,14 +205,14 @@
                     <ul>
                         <li>
                             <div class="showTop-title">
-                                <div class="showTop-title-img">
-                                    <a href="#">
+                                <div class="showTop-title-img" routerLink="/music/discover/toplist">
+                                    <a routerLink="/music/discover/toplist">
                                         <img src="http://p3.music.126.net/N2HO5xfYEqyQ8q6oxCw8IQ==/18713687906568048.jpg?param=100y100" alt="">
                                         <a href=""></a>
                                     </a>
                                 </div>
                                 <div>
-                                    <p class="showTop-title-title">音乐云新歌榜</p>
+                                    <p class="showTop-title-title" routerLink="/music/discover/toplist">音乐云新歌榜</p>
                                     <p class="showTop-title-p">
                                         <i class="fa fa-play-circle-o"></i>
                                         <i class="fa fa-plus-square-o"> </i>
@@ -239,13 +239,13 @@
                         <li>
                             <div class="showTop-title">
                                 <div class="showTop-title-img">
-                                    <a href="#">
+                                    <a  routerLink="/music/discover/toplist">
                                         <img src="http://p3.music.126.net/sBzD11nforcuh1jdLSgX7g==/18740076185638788.jpg?param=100y100" alt="">
                                         <a href=""></a>
                                     </a>
                                 </div>
                                 <div>
-                                    <p class="showTop-title-title">网易原创歌曲榜</p>
+                                    <p class="showTop-title-title" routerLink="/music/discover/toplist">网易原创歌曲榜</p>
                                     <p class="showTop-title-p">
                                         <i class="fa fa-play-circle-o"></i>
                                         <i class="fa fa-plus-square-o"> </i>
@@ -281,12 +281,12 @@
                 <p>
                     <b>热门歌手</b>
                 </p>
-                <a href="">查看全部></a>
+                <a routerLink="/music/discover/artist">查看全部></a>
             </div>
             <div class="hot-artists-list">
                 <ul>
                     <li *ngFor="let topArtist of topArtists">
-                        <a href="">
+                        <a routerLink="/music/discover/artistInformation" [queryParams]="{id:topArtist.id}">
                             <img src="{{topArtist.img1v1Url}}" alt="">
                             <div>
                                 <p>

@@ -18,9 +18,9 @@ export class AlbumsComponent implements OnInit {
     songs: any; // 歌单
     albumCommends: any; // 评论
 
-        /**
-     * 分页部分代码
-     */
+    /**
+ * 分页部分代码
+ */
     // 分页
     currentPage = 1;
     maxSize = 5;
@@ -42,13 +42,16 @@ export class AlbumsComponent implements OnInit {
      */
     thisAlbum(id: any) {
         this.albumService.thisAlbum(id).subscribe(data => {
-            this.thisAlbums = data;
-            this.album = data['album'];
-            this.songs = data['songs'];
-            this.albumCommend(this.album.id, 1);
-            this.album.publishTime = moment(this.album.publishTime).format('YYYY-MM-DD'); // 格式化专辑出版时间
-            this.albumTexts = this.text(this.album.description); // 格式化专辑说明
-            this.openClose = (this.albumTexts.length >= 6); // 判断专辑说明是否大于六行，大于六行隐藏展开按钮
+            if (data['code'] !== 404) {
+                this.thisAlbums = data;
+                this.album = data['album'];
+                this.songs = data['songs'];
+                this.albumCommend(this.album.id, 1);
+                this.album.publishTime = moment(this.album.publishTime).format('YYYY-MM-DD'); // 格式化专辑出版时间
+                this.albumTexts = this.text(this.album.description); // 格式化专辑说明
+                this.openClose = (this.albumTexts.length >= 6); // 判断专辑说明是否大于六行，大于六行隐藏展开按钮
+            }
+
             console.log(data);
         });
     }

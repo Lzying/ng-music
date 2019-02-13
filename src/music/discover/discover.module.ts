@@ -34,8 +34,8 @@ import { CommendModule } from '../../sha/component';
     FormsModule,
     CommonModule,
     CarouselModule,
-    PaginationModule,
     CommendModule,
+    PaginationModule.forRoot(),
     RouterModule.forChild(DiscoverRoute)
   ],
   providers: [],

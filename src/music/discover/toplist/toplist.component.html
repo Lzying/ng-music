@@ -25,7 +25,7 @@
                 <b>全球媒体榜</b>
             </p>
             <ul class="music-top-lists">
-                <li routerLink="/music/discover/toplist"*ngFor="let globalTopList of globalTopLists"
+                <li routerLink="/music/discover/toplist" *ngFor="let globalTopList of globalTopLists"
                     (click)="musicTop(globalTopList.getid);id=globalTopList.getid" [class.music-top-li]="id==globalTopList.getid">
                     <img src="{{globalTopList.ImgUrl}}" alt="">
                     <div>
