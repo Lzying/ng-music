@@ -95,7 +95,7 @@
                             </div>
                         </div>
                         <p>
-                            <a routerLink="/music/discover/albums" [queryParams]="{id:personalized.id}"> {{personalized?.name}}</a>
+                            <a > {{personalized?.name}}</a>
                         </p>
                     </li>
                 </ul>
@@ -107,7 +107,7 @@
                 <i class="fa fa-circle-o mo-content-title-i"></i>
                 <a class="mo-content-title-a" href="#">新碟上架</a>
                 <p class="mo-content-title-p">
-                    <a href="">更多</a>
+                    <a routerLink="/music/discover/album">更多</a>
                     <i class="fa fa-arrow-right"></i>
                 </p>
             </div>
@@ -118,14 +118,14 @@
                             <img src="{{topAlbum?.picUrl}}" alt="">
                         </a>
                         <p>
-                            <a href="">{{topAlbum?.name}} </a>
+                            <a routerLink="/music/discover/albums" [queryParams]="{id:topAlbum.id}">{{topAlbum?.name}} </a>
                         </p>
                         <p>
-                            <a href="">{{topAlbum?.name}} </a>
+                            <a href="">{{topAlbum?.artist.name}} </a>
                         </p>
                     </li>
                 </ul>
-                <ul class="showNew showNew-two">
+                <!-- <ul class="showNew showNew-two">
                     <li *ngFor="let topAlbum of topAlbumsTwo">
                         <a class="showNew-a" href="">
                             <img src="{{topAlbum?.picUrl}}" alt="">
@@ -138,8 +138,8 @@
                         </p>
 
                     </li>
-                </ul>
-                <ul class="showNew showNew-three">
+                </ul> -->
+                <!-- <ul class="showNew showNew-three">
                     <li *ngFor="let topAlbum of topAlbumsThree">
                         <a class="showNew-a" href="">
                             <img src="{{topAlbum?.picUrl}}" alt="">
@@ -152,7 +152,7 @@
                         </p>
 
                     </li>
-                </ul>
+                </ul> -->
             </div>
         </div>
 
