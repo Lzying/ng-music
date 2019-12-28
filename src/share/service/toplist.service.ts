@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import * as $ from 'jquery';
 import { environment } from '../../environments/environment';
@@ -9,7 +9,7 @@ export class TopListService {
     url = environment.api.baseUrl;
 
     constructor(
-        private http: Http,
+        private httpClient: HttpClient,
     ) { }
 
     // 列表内容暂时无法通过api获取到
@@ -123,18 +123,19 @@ export class TopListService {
 
     // 音乐飙升榜,
     musicTop(getid: any) {
-        return this.http.get(`${this.url}/top/list?idx=${getid}`)
-            .map((res) => {
-                return res.json();
-            });
+        return this.httpClient.get(`${this.url}/top/list?idx=${getid}`);
+        // .map((res) => {
+        //     return res.json();
+        // });
     }
 
     // 歌单评论，即每个榜单的评论,页数以1开头
     topCommend(id: any, page: number) {
-        return this.http.get(`${this.url}/comment/playlist?id=${id}&offset=${(page - 1) * 20}&limit=20`)
-            .map((res) => {
-                return res.json();
-            });
+        let url = `${this.url}/comment/playlist?id=${id}&offset=${(page - 1) * 20}&limit=20`;
+        return this.httpClient.get(url);
+        // .map((res) => {
+        //     return res.json();
+        // });
     }
 
 

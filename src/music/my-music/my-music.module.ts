@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MyMusicRoute } from './my-music.route';
-
+import { HttpClientModule } from '@angular/common/http';
 
 import { MyMusicComponent } from './my-music.component';
 
@@ -11,6 +11,7 @@ import { MyMusicComponent } from './my-music.component';
     MyMusicComponent
   ],
   imports: [
+    HttpClientModule,
     RouterModule.forChild(MyMusicRoute)
   ],
   providers: [],

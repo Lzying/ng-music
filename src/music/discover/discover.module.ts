@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 import { DiscoverRoute } from './discover.route';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
+import { HttpClientModule } from '@angular/common/http';
 import { DiscoverComponent } from './discover.component';
 
 import { TopListComponent } from './toplist/toplist.component';
@@ -31,6 +31,7 @@ import { CommendModule } from '../../share/component';
     AlbumsComponent
   ],
   imports: [
+    HttpClientModule,
     FormsModule,
     CommonModule,
     CarouselModule,
