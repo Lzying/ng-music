@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LocalService } from '../assets/service/local.service';
+import { LocalService } from '../share/service/local.service';
 
 @Component({
   selector: 'app-music',

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ArtistService } from '../../../assets/service/artist.service';
+import { ArtistService } from '../../../share/service/artist.service';
 
 @Component({
     selector: 'app-artist',

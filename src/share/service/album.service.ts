@@ -2,11 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-import { config } from '../config/config';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class AlbumService {
-    url = config.api.baseUrl;
+    url = environment.api.baseUrl;
     constructor(
         private http: Http,
         private httpClient: HttpClient,

@@ -17,7 +17,7 @@ import { AlbumComponent } from './album/album.component';
 
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
-import { CommendModule } from '../../sha/component';
+import { CommendModule } from '../../share/component';
 @NgModule({
   declarations: [
     DiscoverComponent,
