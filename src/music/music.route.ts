@@ -6,8 +6,8 @@ export const MusicRoute = [
         component: MusicComponent,
         children: [
             { path: '', redirectTo: 'discover', pathMatch: 'full' },
-            { path: 'discover', loadChildren: 'music/discover/discover.module#DiscoverModule' },
-            { path: 'mymusic', loadChildren: 'music/my-music/my-music.module#MyMusicModule' },
+            { path: 'discover', loadChildren: () => import('music/discover/discover.module').then(m => m.DiscoverModule) },
+            { path: 'mymusic', loadChildren: () => import('music/my-music/my-music.module').then(m => m.MyMusicModule) },
             { path: '**', redirectTo: 'discover' }
         ]
 

@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 // import 'rxjs/add/operator/map';
 import * as $ from 'jquery';
 import { environment } from '../../environments/environment';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class PlayListService {
