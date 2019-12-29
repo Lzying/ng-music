@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import * as $ from 'jquery';
 import { environment } from '../../environments/environment';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class TopListService {
@@ -122,15 +123,15 @@ export class TopListService {
 
 
     // 音乐飙升榜,
-    musicTop(getid: any) {
-        return this.httpClient.get(`${this.url}/top/list?idx=${getid}`);
+    musicTop(getid: any): Observable<any> {
+        return this.httpClient.get<any>(`${this.url}/top/list?idx=${getid}`);
         // .map((res) => {
         //     return res.json();
         // });
     }
 
     // 歌单评论，即每个榜单的评论,页数以1开头
-    topCommend(id: any, page: number) {
+    topCommend(id: any, page: number): Observable<any> {
         let url = `${this.url}/comment/playlist?id=${id}&offset=${(page - 1) * 20}&limit=20`;
         return this.httpClient.get(url);
         // .map((res) => {
