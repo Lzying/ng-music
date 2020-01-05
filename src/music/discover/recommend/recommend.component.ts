@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpService } from '../../../assets/service/http.service';
+import { HttpService } from '../../../share/service/http.service';
 
 @Component({
     selector: 'app-recommend',

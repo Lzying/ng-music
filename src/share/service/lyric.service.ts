@@ -4,13 +4,13 @@ import { Injectable } from '@angular/core';
 export class LyricService {
 
     analysisLyric(lyric: any): any {
-        let tlyric: any = []
+        let tlyric: any = [];
         let lrc;
-        lrc = lyric.lrc.lyric.split("\n");
+        lrc = lyric.lrc.lyric.split('\n');
         if (lyric.tlyric.lyric) {
-            tlyric = lyric.tlyric.lyric.split("\n");
+            tlyric = lyric.tlyric.lyric.split('\n');
         } else {
-            let tlyric = null;
+            // let tlyric = null;
         }
         console.log(lyric);
         console.log(tlyric);

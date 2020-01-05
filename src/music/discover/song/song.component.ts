@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { SongService } from '../../../assets/service/song.service';
-import { CommendTimeService } from '../../../assets/service/commendTime.service';
-import { LyricService } from '../../../assets/service/lyric.service';
+import { SongService } from '../../../share/service/song.service';
+import { CommendTimeService } from '../../../share/service/commendTime.service';
+import { LyricService } from '../../../share/service/lyric.service';
 import * as moment from 'moment';
 
 @Component({

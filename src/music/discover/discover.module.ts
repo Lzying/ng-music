@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 import { DiscoverRoute } from './discover.route';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
+import { HttpClientModule } from '@angular/common/http';
 import { DiscoverComponent } from './discover.component';
 
 import { TopListComponent } from './toplist/toplist.component';
@@ -17,7 +17,7 @@ import { AlbumComponent } from './album/album.component';
 
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
-import { CommendModule } from '../../sha/component';
+import { CommendModule } from '../../share/component';
 @NgModule({
   declarations: [
     DiscoverComponent,
@@ -31,6 +31,7 @@ import { CommendModule } from '../../sha/component';
     AlbumsComponent
   ],
   imports: [
+    HttpClientModule,
     FormsModule,
     CommonModule,
     CarouselModule,

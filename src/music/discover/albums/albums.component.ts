@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AlbumService } from '../../../assets/service/album.service';
-import { CommendTimeService } from '../../../assets/service/commendTime.service';
+import { AlbumService } from '../../../share/service/album.service';
+import { CommendTimeService } from '../../../share/service/commendTime.service';
 import * as moment from 'moment';
 
 @Component({

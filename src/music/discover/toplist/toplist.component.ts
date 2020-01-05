@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { TopListService } from '../../../assets/service/toplist.service';
-import { CommendTimeService } from '../../../assets/service/commendTime.service';
+import { TopListService } from '../../../share/service/toplist.service';
+import { CommendTimeService } from '../../../share/service/commendTime.service';
 import * as moment from 'moment';
 
 @Component({

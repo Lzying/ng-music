@@ -7,5 +7,5 @@ import { Input } from '@angular/core';
   styleUrls: ['./commend.component.scss']
 })
 export class CommendComponent {
- @Input('MyCommends') myCommends: any;
+  @Input() myCommends: any;
 }

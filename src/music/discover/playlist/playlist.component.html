@@ -4,7 +4,7 @@
         <div class="playlist-title clearfix">
             <div class="playlist-title-left">
                 <p>全部</p>
-                <a href="">选择分类</a>
+                <a  >选择分类</a>
             </div>
             <div class="playlist-title-right">
                 <a (click)="total('hot',1);selected='hot'" [class.playlist-title-right-a]="selected=='hot'" title="热门">热门</a>
@@ -17,14 +17,14 @@
                 <li *ngFor="let playListService of playListServices">
                     <div class="playlist-connet-list-img">
                         <img height="140" width="140" src="{{playListService?.coverImgUrl}}" alt="">
-                        <a href="" title="{{playListService?.name}}"></a>
+                        <a   title="{{playListService?.name}}"></a>
                         <div class="playlist-connet-list-play">
                             <p>
                                 <i class="fa fa-headphones"></i>
                                 <span>{{playListService.playCount}}</span>
                             </p>
                             <p>
-                                <a href="">
+                                <a  >
                                     <i class="fa fa-play-circle-o"></i>
                                 </a>
                             </p>
