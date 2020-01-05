@@ -13,16 +13,16 @@
             <textarea placeholder="评论"></textarea>
             <div>
                 <p>
-                    <a href="">
+                    <a  >
                         <i class="fa fa-smile-o"></i>
                     </a>
-                    <a href="">
+                    <a  >
                         <i>@</i>
                     </a>
                 </p>
                 <p>
                     <span>140</span>
-                    <a href="">评论</a>
+                    <a  >评论</a>
                 </p>
             </div>
         </div>
@@ -39,20 +39,20 @@
                     <img height="50" width="50" src="{{hotComment.user.avatarUrl}}" alt="">
                     <div class="commend-list-text">
                         <p class="commend-list-text-p">
-                            <a href="">{{hotComment.user.nickname}}</a>
+                            <a  >{{hotComment.user.nickname}}</a>
                             <span>:{{hotComment.content}}</span>
                         </p>
                         <p class="commend-list-text-p" *ngIf="hotComment?.beReplied[0]?.content">
-                            <a href="">{{hotComment?.beReplied[0]?.user.nickname}}</a>
+                            <a  >{{hotComment?.beReplied[0]?.user.nickname}}</a>
                             <span>:{{hotComment?.beReplied[0]?.content}}</span>
                         </p>
                         <div>
                             <p>
-                                <a href="">
+                                <a  >
                                     <i class="fa fa-thumbs-o-up"></i>
                                     <span *ngIf="hotComment?.likedCount">({{hotComment?.likedCount}})</span>
                                 </a>
-                                <a href="">回复</a>
+                                <a  >回复</a>
                             </p>
                             <span>{{hotComment?.time}}</span>
                         </div>
@@ -70,20 +70,20 @@
                     <img height="50" width="50" src="{{comment?.user.avatarUrl}}" alt="">
                     <div class="commend-list-text">
                         <p class="commend-list-text-p">
-                            <a href="">{{comment?.user.nickname}}</a>
+                            <a  >{{comment?.user.nickname}}</a>
                             <span>:{{comment?.content}}</span>
                         </p>
                         <p class="commend-list-text-p" *ngIf="comment?.beReplied[0]?.content">
-                            <a href="">{{comment?.beReplied[0].user.nickname}}</a>
+                            <a  >{{comment?.beReplied[0].user.nickname}}</a>
                             <span>:{{comment?.beReplied[0].content}}</span>
                         </p>
                         <div>
                             <p>
-                                <a href="">
+                                <a  >
                                     <i class="fa fa-thumbs-o-up"></i>
                                     <span *ngIf="comment?.likedCount">({{comment?.likedCount}})</span>
                                 </a>
-                                <a href="">回复</a>
+                                <a  >回复</a>
                             </p>
                             <span>{{comment?.time}}</span>
                         </div>

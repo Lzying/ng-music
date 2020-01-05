@@ -9,7 +9,7 @@
             <div class="album-title-title clearfix">
                 <div class="album-title-img">
                     <img height="177" width="177" src="{{album.picUrl}}" alt="">
-                    <a href=""></a>
+                    <a  ></a>
                 </div>
                 <div class="album-title-name">
                     <div>
@@ -69,7 +69,7 @@
                         <tr *ngFor="let song of songs ; let indexs=index">
                             <td>{{indexs+1}}</td>
                             <td>
-                                <a href="" routerLink="/music/discover/song" [queryParams]="{id:song.id}">{{song.name}}</a>
+                                <a   routerLink="/music/discover/song" [queryParams]="{id:song.id}">{{song.name}}</a>
                             </td>
                             <td>05.03</td>
                             <td>{{song.ar[0].name}}</td>
