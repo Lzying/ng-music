@@ -17,7 +17,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     MusicModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoute),
+    RouterModule.forRoot(appRoute, { relativeLinkResolution: 'legacy' }),
   ],
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy}
