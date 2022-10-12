@@ -31,8 +31,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         cache-dependency-path: './package-lock.json'
-    - run: npm install
+    - name: Install
+      run: npm install
       working-directory: './'
-    - run: npm run build
+    - name: build
+      run: npm run build
       working-directory: './'
     # - run: npm test
