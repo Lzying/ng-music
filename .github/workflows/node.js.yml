@@ -3,9 +3,9 @@
 
 name: Node.js CI
 
-stages: # 分段
-  - install
-  - build
+# stages: # 分段
+#   - install
+#   - build
 
 on:
   push:
