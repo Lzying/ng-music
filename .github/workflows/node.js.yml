@@ -3,6 +3,10 @@
 
 name: Node.js CI
 
+stages: # 分段
+  - install
+  - build
+
 on:
   push:
     branches: [ "master" ]
@@ -26,6 +30,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        cache-dependency-path: './package-lock.json'
     - run: npm install
+      working-directory: './'
     - run: npm run build
-    - run: npm test
+      working-directory: './'
+    # - run: npm test
