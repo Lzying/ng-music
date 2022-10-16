@@ -7,8 +7,9 @@ import { ArtistInformationComponent } from './artist-information/artist-informat
 import { ArtistComponent } from './artist/artist.component';
 import { AlbumsComponent } from './albums/albums.component';
 import { AlbumComponent } from './album/album.component';
+import { Routes } from '@angular/router';
 
-export const DiscoverRoute = [
+export const DiscoverRoute: Routes = [
     {
         path: '',
         component: DiscoverComponent,

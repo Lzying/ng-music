@@ -1,6 +1,8 @@
 import { MusicComponent } from './music.component';
+import { Routes } from '@angular/router';
 
-export const MusicRoute = [
+
+export const MusicRoute: Routes = [
     {
         path: 'music',
         component: MusicComponent,
