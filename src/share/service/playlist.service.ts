@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 // import 'rxjs/add/operator/map';
-import * as $ from 'jquery';
+// import * as $ from 'jquery';
 import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
 

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 // import 'rxjs/add/operator/map';
-import * as $ from 'jquery';
+// import * as $ from 'jquery';
 import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
 
@@ -61,19 +61,19 @@ export class HttpService {
 
 
     // ajax请求，跨域
-    cla() {
-        $.ajax({
-            url: `${this.url}/personalized`,
-            // 跨域设置
-            xhrFields: {
-                withCredentials: true
-            },
-            success: function (data) {
-                console.log(data);
-            },
-            error: function (err) {
-                console.log(err);
-            }
-        });
-    }
+    // cla() {
+    //     $.ajax({
+    //         url: `${this.url}/personalized`,
+    //         // 跨域设置
+    //         xhrFields: {
+    //             withCredentials: true
+    //         },
+    //         success: function (data) {
+    //             console.log(data);
+    //         },
+    //         error: function (err) {
+    //             console.log(err);
+    //         }
+    //     });
+    // }
 }
