@@ -23,7 +23,7 @@
     "core-js": "2.4.1",
     "moment": "2.29.4",
     "ng-zorro-antd": "13.2.0",
-    "node-sass": "4.13.0",
+    "node-sass": "7.0.0",
     "rxjs": "6.5.4",
     "rxjs-compat": "6.0.0-rc.0",
     "tslib": "2.0.0",
