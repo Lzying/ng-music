@@ -15,8 +15,8 @@ import { ArtistComponent } from './artist/artist.component';
 import { AlbumsComponent } from './albums/albums.component';
 import { AlbumComponent } from './album/album.component';
 
-import { CarouselModule } from 'ngx-bootstrap/carousel';
-import { PaginationModule } from 'ngx-bootstrap/pagination';
+// import { CarouselModule } from 'ngx-bootstrap/carousel';
+// import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { CommendModule } from '../../share/component';
 @NgModule({
   declarations: [
@@ -34,9 +34,9 @@ import { CommendModule } from '../../share/component';
     HttpClientModule,
     FormsModule,
     CommonModule,
-    CarouselModule,
+    // CarouselModule,
     CommendModule,
-    PaginationModule.forRoot(),
+    // PaginationModule.forRoot(),
     RouterModule.forChild(DiscoverRoute)
   ],
   providers: [],
